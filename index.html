@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MusicaViva - Seu portal completo de música com cifras, videoaulas, teoria musical, dicionário de acordes e muito mais para entusiastas da música.">
+    <meta name="keywords" content="música, cifras, acordes, violão, teclado, teoria musical, videoaulas, aprender música">
+    <meta name="author" content="MusicaViva">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="MusicaViva - Portal de Música">
+    <meta property="og:description" content="Aprenda música de forma completa: cifras, videoaulas, teoria musical e muito mais!">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "MusicaViva",
+        "description": "Portal completo de música com cifras, videoaulas e teoria musical",
+        "url": "https://musicaviva.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://musicaviva.com/busca?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <title>MusicaViva - Portal de Música | Cifras, Videoaulas e Teoria Musical</title>
+</head>
+<body>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <a href="index.html" class="header__logo" aria-label="MusicaViva - Página Inicial">
+                <span class="header__logo-icon">🎵</span>
+                <span class="header__logo-text">Musica<span class="header__logo-accent">Viva</span></span>
+            </a>
+            
+            <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="header__menu-icon"></span>
+            </button>
+            
+            <nav class="header__nav" id="main-nav" role="navigation" aria-label="Navegação principal">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="index.html" class="header__nav-link header__nav-link--active" aria-current="page">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                            <span>Início</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="cifras.html" class="header__nav-link">
+                            <i class="fas fa-music" aria-hidden="true"></i>
+                            <span>Cifras</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="videoaulas.html" class="header__nav-link">
+                            <i class="fas fa-video" aria-hidden="true"></i>
+                            <span>Videoaulas</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="artigos.html" class="header__nav-link">
+                            <i class="fas fa-newspaper" aria-hidden="true"></i>
+                            <span>Artigos</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="dicionario.html" class="header__nav-link">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                            <span>Dicionário</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="curiosidades.html" class="header__nav-link">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                            <span>Curiosidades</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <button class="header__theme-toggle" aria-label="Alternar tema escuro/claro" title="Alternar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="header__search-toggle" aria-label="Abrir busca" title="Buscar">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Search Overlay -->
+        <div class="search-overlay" role="search" aria-hidden="true">
+            <div class="search-overlay__container">
+                <form class="search-overlay__form" action="#" method="GET">
+                    <input 
+                        type="search" 
+                        class="search-overlay__input" 
+                        placeholder="Buscar cifras, artigos, videoaulas..." 
+                        aria-label="Campo de busca"
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="search-overlay__submit" aria-label="Buscar">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+                <button class="search-overlay__close" aria-label="Fechar busca">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__background">
+                <div class="hero__particles" aria-hidden="true"></div>
+                <div class="hero__gradient" aria-hidden="true"></div>
+            </div>
+            <div class="hero__container">
+                <div class="hero__content">
+                    <span class="hero__badge">🎸 Aprenda música do seu jeito</span>
+                    <h1 id="hero-title" class="hero__title">
+                        Sua jornada musical<br>
+                        <span class="hero__title-gradient">começa aqui</span>
+                    </h1>
+                    <p class="hero__description">
+                        Explore cifras de milhares de músicas, assista videoaulas de teoria musical, 
+                        violão, teclado e muito mais. Tudo em um só lugar para você evoluir na música.
+                    </p>
+                    <div class="hero__cta">
+                        <a href="cifras.html" class="btn btn--primary btn--lg">
+                            <i class="fas fa-music" aria-hidden="true"></i>
+                            Ver Cifras
+                        </a>
+                        <a href="videoaulas.html" class="btn btn--outline btn--lg">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                            Assistir Aulas
+                        </a>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="hero__stat">
+                            <span class="hero__stat-number" data-count="500">0</span>
+                            <span class="hero__stat-label">Cifras</span>
+                        </div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-number" data-count="120">0</span>
+                            <span class="hero__stat-label">Videoaulas</span>
+                        </div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-number" data-count="80">0</span>
+                            <span class="hero__stat-label">Artigos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <div class="hero__instrument hero__instrument--guitar">
+                        <i class="fas fa-guitar" aria-hidden="true"></i>
+                    </div>
+                    <div class="hero__instrument hero__instrument--piano">
+                        <i class="fas fa-piano-keyboard" aria-hidden="true">🎹</i>
+                    </div>
+                    <div class="hero__notes" aria-hidden="true">
+                        <span class="hero__note">♪</span>
+                        <span class="hero__note">♫</span>
+                        <span class="hero__note">♬</span>
+                        <span class="hero__note">🎶</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__scroll-indicator" aria-hidden="true">
+                <span>Role para baixo</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features" aria-labelledby="features-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-header__badge">Recursos</span>
+                    <h2 id="features-title" class="section-header__title">
+                        Tudo que você precisa para <span class="text-gradient">aprender música</span>
+                    </h2>
+                    <p class="section-header__description">
+                        Recursos completos para músicos de todos os níveis, do iniciante ao avançado.
+                    </p>
+                </header>
+                
+                <div class="features__grid">
+                    <article class="feature-card">
+                        <div class="feature-card__icon feature-card__icon--cifras">
+                            <i class="fas fa-music" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-card__title">Cifras Musicais</h3>
+                        <p class="feature-card__description">
+                            Acervo completo com cifras de diversos gêneros: rock, pop, MPB, sertanejo, gospel e muito mais. 
+                            Com transposição automática e visualização de acordes.
+                        </p>
+                        <a href="cifras.html" class="feature-card__link">
+                            Explorar Cifras <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon feature-card__icon--video">
+                            <i class="fas fa-video" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-card__title">Videoaulas</h3>
+                        <p class="feature-card__description">
+                            Aprenda teoria musical, técnicas de violão, teclado, bateria e mais. 
+                            Aulas organizadas por nível e categoria para facilitar seu aprendizado.
+                        </p>
+                        <a href="videoaulas.html" class="feature-card__link">
+                            Ver Videoaulas <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon feature-card__icon--artigos">
+                            <i class="fas fa-newspaper" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-card__title">Artigos</h3>
+                        <p class="feature-card__description">
+                            Conteúdo aprofundado sobre história da música, técnicas, equipamentos, 
+                            dicas de produção e tudo que você precisa saber sobre o mundo musical.
+                        </p>
+                        <a href="artigos.html" class="feature-card__link">
+                            Ler Artigos <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon feature-card__icon--dicionario">
+                            <i class="fas fa-book" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-card__title">Dicionário de Acordes</h3>
+                        <p class="feature-card__description">
+                            Consulte centenas de acordes para violão e teclado com diagramas interativos, 
+                            posições alternativas e áudio de referência.
+                        </p>
+                        <a href="dicionario.html" class="feature-card__link">
+                            Abrir Dicionário <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon feature-card__icon--curiosidades">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-card__title">Curiosidades</h3>
+                        <p class="feature-card__description">
+                            Fatos surpreendentes sobre música, artistas lendários, instrumentos raros 
+                            e histórias incríveis do mundo musical.
+                        </p>
+                        <a href="curiosidades.html" class="feature-card__link">
+                            Descobrir Mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-card__icon feature-card__icon--teoria">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-card__title">Teoria Musical</h3>
+                        <p class="feature-card__description">
+                            Domine os fundamentos: escalas, intervalos, formação de acordes, 
+                            harmonia funcional e análise musical de forma clara e prática.
+                        </p>
+                        <a href="videoaulas.html#teoria" class="feature-card__link">
+                            Aprender Teoria <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Popular Cifras Section -->
+        <section class="popular-cifras" aria-labelledby="popular-cifras-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-header__badge">🔥 Em Alta</span>
+                    <h2 id="popular-cifras-title" class="section-header__title">
+                        Cifras mais <span class="text-gradient">populares</span>
+                    </h2>
+                    <p class="section-header__description">
+                        As músicas mais acessadas por nossos usuários esta semana.
+                    </p>
+                </header>
+                
+                <div class="cifras-carousel">
+                    <div class="cifras-carousel__track">
+                        <article class="cifra-card">
+                            <div class="cifra-card__rank">1</div>
+                            <div class="cifra-card__content">
+                                <span class="cifra-card__genre">MPB</span>
+                                <h3 class="cifra-card__title">Evidências</h3>
+                                <p class="cifra-card__artist">Chitãozinho & Xororó</p>
+                                <div class="cifra-card__meta">
+                                    <span class="cifra-card__difficulty cifra-card__difficulty--easy">
+                                        <i class="fas fa-signal" aria-hidden="true"></i> Fácil
+                                    </span>
+                                    <span class="cifra-card__key">Tom: C</span>
+                                </div>
+                            </div>
+                            <a href="cifras.html#evidencias" class="cifra-card__link" aria-label="Ver cifra de Evidências">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </article>
+                        
+                        <article class="cifra-card">
+                            <div class="cifra-card__rank">2</div>
+                            <div class="cifra-card__content">
+                                <span class="cifra-card__genre">Rock</span>
+                                <h3 class="cifra-card__title">Pais e Filhos</h3>
+                                <p class="cifra-card__artist">Legião Urbana</p>
+                                <div class="cifra-card__meta">
+                                    <span class="cifra-card__difficulty cifra-card__difficulty--medium">
+                                        <i class="fas fa-signal" aria-hidden="true"></i> Médio
+                                    </span>
+                                    <span class="cifra-card__key">Tom: G</span>
+                                </div>
+                            </div>
+                            <a href="cifras.html#pais-e-filhos" class="cifra-card__link" aria-label="Ver cifra de Pais e Filhos">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </article>
+                        
+                        <article class="cifra-card">
+                            <div class="cifra-card__rank">3</div>
+                            <div class="cifra-card__content">
+                                <span class="cifra-card__genre">Pop</span>
+                                <h3 class="cifra-card__title">Perfect</h3>
+                                <p class="cifra-card__artist">Ed Sheeran</p>
+                                <div class="cifra-card__meta">
+                                    <span class="cifra-card__difficulty cifra-card__difficulty--easy">
+                                        <i class="fas fa-signal" aria-hidden="true"></i> Fácil
+                                    </span>
+                                    <span class="cifra-card__key">Tom: G</span>
+                                </div>
+                            </div>
+                            <a href="cifras.html#perfect" class="cifra-card__link" aria-label="Ver cifra de Perfect">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </article>
+                        
+                        <article class="cifra-card">
+                            <div class="cifra-card__rank">4</div>
+                            <div class="cifra-card__content">
+                                <span class="cifra-card__genre">Gospel</span>
+                                <h3 class="cifra-card__title">Nada Além do Sangue</h3>
+                                <p class="cifra-card__artist">Fernandinho</p>
+                                <div class="cifra-card__meta">
+                                    <span class="cifra-card__difficulty cifra-card__difficulty--easy">
+                                        <i class="fas fa-signal" aria-hidden="true"></i> Fácil
+                                    </span>
+                                    <span class="cifra-card__key">Tom: E</span>
+                                </div>
+                            </div>
+                            <a href="cifras.html#nada-alem" class="cifra-card__link" aria-label="Ver cifra de Nada Além do Sangue">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </article>
+                        
+                        <article class="cifra-card">
+                            <div class="cifra-card__rank">5</div>
+                            <div class="cifra-card__content">
+                                <span class="cifra-card__genre">Sertanejo</span>
+                                <h3 class="cifra-card__title">Shallow</h3>
+                                <p class="cifra-card__artist">Lady Gaga & Bradley Cooper</p>
+                                <div class="cifra-card__meta">
+                                    <span class="cifra-card__difficulty cifra-card__difficulty--medium">
+                                        <i class="fas fa-signal" aria-hidden="true"></i> Médio
+                                    </span>
+                                    <span class="cifra-card__key">Tom: G</span>
+                                </div>
+                            </div>
+                            <a href="cifras.html#shallow" class="cifra-card__link" aria-label="Ver cifra de Shallow">
+                                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                        </article>
+                    </div>
+                    
+                    <div class="cifras-carousel__controls">
+                        <button class="cifras-carousel__btn cifras-carousel__btn--prev" aria-label="Anterior">
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="cifras-carousel__btn cifras-carousel__btn--next" aria-label="Próximo">
+                            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="section-cta">
+                    <a href="cifras.html" class="btn btn--primary">
+                        Ver Todas as Cifras <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Latest Videoaulas Section -->
+        <section class="latest-videoaulas" aria-labelledby="videoaulas-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-header__badge">📺 Novidades</span>
+                    <h2 id="videoaulas-title" class="section-header__title">
+                        Últimas <span class="text-gradient">videoaulas</span>
+                    </h2>
+                    <p class="section-header__description">
+                        Conteúdo fresco para acelerar seu aprendizado musical.
+                    </p>
+                </header>
+                
+                <div class="videoaulas-grid">
+                    <article class="video-card video-card--featured">
+                        <div class="video-card__thumbnail">
+                            <div class="video-card__thumbnail-placeholder">
+                                <i class="fas fa-guitar" aria-hidden="true"></i>
+                            </div>
+                            <span class="video-card__duration">15:32</span>
+                            <button class="video-card__play" aria-label="Assistir vídeo">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card__content">
+                            <div class="video-card__tags">
+                                <span class="video-card__tag video-card__tag--violao">Violão</span>
+                                <span class="video-card__tag video-card__tag--nivel">Iniciante</span>
+                            </div>
+                            <h3 class="video-card__title">Como fazer pestana perfeita - Guia completo</h3>
+                            <p class="video-card__description">
+                                Aprenda a técnica correta de pestana no violão com exercícios práticos e dicas para evitar dores.
+                            </p>
+                            <div class="video-card__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 12.5k views</span>
+                                <span><i class="fas fa-clock" aria-hidden="true"></i> há 2 dias</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card">
+                        <div class="video-card__thumbnail">
+                            <div class="video-card__thumbnail-placeholder">
+                                <i class="fas fa-music" aria-hidden="true"></i>
+                            </div>
+                            <span class="video-card__duration">22:15</span>
+                            <button class="video-card__play" aria-label="Assistir vídeo">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card__content">
+                            <div class="video-card__tags">
+                                <span class="video-card__tag video-card__tag--teoria">Teoria</span>
+                            </div>
+                            <h3 class="video-card__title">Entendendo o Campo Harmônico Maior</h3>
+                            <div class="video-card__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 8.2k</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card">
+                        <div class="video-card__thumbnail">
+                            <div class="video-card__thumbnail-placeholder">
+                                🎹
+                            </div>
+                            <span class="video-card__duration">18:45</span>
+                            <button class="video-card__play" aria-label="Assistir vídeo">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card__content">
+                            <div class="video-card__tags">
+                                <span class="video-card__tag video-card__tag--teclado">Teclado</span>
+                            </div>
+                            <h3 class="video-card__title">Inversões de Acordes no Teclado</h3>
+                            <div class="video-card__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 5.7k</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card">
+                        <div class="video-card__thumbnail">
+                            <div class="video-card__thumbnail-placeholder">
+                                <i class="fas fa-drum" aria-hidden="true"></i>
+                            </div>
+                            <span class="video-card__duration">12:30</span>
+                            <button class="video-card__play" aria-label="Assistir vídeo">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card__content">
+                            <div class="video-card__tags">
+                                <span class="video-card__tag video-card__tag--ritmo">Ritmo</span>
+                            </div>
+                            <h3 class="video-card__title">Ritmos Brasileiros: Bossa Nova</h3>
+                            <div class="video-card__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 9.3k</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="section-cta">
+                    <a href="videoaulas.html" class="btn btn--primary">
+                        Ver Todas as Videoaulas <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Articles Preview Section -->
+        <section class="articles-preview" aria-labelledby="articles-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-header__badge">📚 Leitura</span>
+                    <h2 id="articles-title" class="section-header__title">
+                        Artigos em <span class="text-gradient">destaque</span>
+                    </h2>
+                    <p class="section-header__description">
+                        Conhecimento musical aprofundado para expandir seus horizontes.
+                    </p>
+                </header>
+                
+                <div class="articles-grid">
+                    <article class="article-card article-card--featured">
+                        <div class="article-card__image">
+                            <div class="article-card__image-placeholder">
+                                <i class="fas fa-brain" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card__content">
+                            <div class="article-card__meta">
+                                <span class="article-card__category">Ciência</span>
+                                <span class="article-card__date">
+                                    <i class="fas fa-calendar" aria-hidden="true"></i> 28 Jan 2026
+                                </span>
+                            </div>
+                            <h3 class="article-card__title">
+                                <a href="artigos.html#neurociencia-musica">
+                                    Como a música afeta o cérebro: A neurociência por trás das melodias
+                                </a>
+                            </h3>
+                            <p class="article-card__excerpt">
+                                Descubra como diferentes gêneros musicais ativam áreas específicas do cérebro 
+                                e como isso pode melhorar sua criatividade e aprendizado.
+                            </p>
+                            <div class="article-card__footer">
+                                <span class="article-card__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 8 min de leitura
+                                </span>
+                                <a href="artigos.html#neurociencia-musica" class="article-card__link">
+                                    Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card__image">
+                            <div class="article-card__image-placeholder article-card__image-placeholder--small">
+                                <i class="fas fa-guitar" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card__content">
+                            <div class="article-card__meta">
+                                <span class="article-card__category">Equipamentos</span>
+                            </div>
+                            <h3 class="article-card__title">
+                                <a href="artigos.html#escolher-violao">
+                                    Guia completo: Como escolher seu primeiro violão
+                                </a>
+                            </h3>
+                            <div class="article-card__footer">
+                                <span class="article-card__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 6 min
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card__image">
+                            <div class="article-card__image-placeholder article-card__image-placeholder--small">
+                                <i class="fas fa-history" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card__content">
+                            <div class="article-card__meta">
+                                <span class="article-card__category">História</span>
+                            </div>
+                            <h3 class="article-card__title">
+                                <a href="artigos.html#historia-rock">
+                                    A evolução do Rock: De Elvis a hoje
+                                </a>
+                            </h3>
+                            <div class="article-card__footer">
+                                <span class="article-card__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 12 min
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-card__image">
+                            <div class="article-card__image-placeholder article-card__image-placeholder--small">
+                                <i class="fas fa-microphone" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card__content">
+                            <div class="article-card__meta">
+                                <span class="article-card__category">Técnica</span>
+                            </div>
+                            <h3 class="article-card__title">
+                                <a href="artigos.html#tecnica-vocal">
+                                    10 exercícios para melhorar sua técnica vocal
+                                </a>
+                            </h3>
+                            <div class="article-card__footer">
+                                <span class="article-card__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 5 min
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="section-cta">
+                    <a href="artigos.html" class="btn btn--primary">
+                        Ver Todos os Artigos <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Curiosities Section -->
+        <section class="curiosities-preview" aria-labelledby="curiosities-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-header__badge">💡 Você Sabia?</span>
+                    <h2 id="curiosities-title" class="section-header__title">
+                        Curiosidades <span class="text-gradient">musicais</span>
+                    </h2>
+                </header>
+                
+                <div class="curiosities-slider">
+                    <div class="curiosity-card curiosity-card--active">
+                        <div class="curiosity-card__icon">🎸</div>
+                        <blockquote class="curiosity-card__text">
+                            "A guitarra elétrica mais cara do mundo é a 'Reach Out to Asia', vendida por 
+                            $2.7 milhões em 2005. Foi assinada por lendas como Eric Clapton, 
+                            Jimmy Page, Mick Jagger e Paul McCartney."
+                        </blockquote>
+                        <cite class="curiosity-card__source">Guinness World Records</cite>
+                    </div>
+                    
+                    <div class="curiosity-card">
+                        <div class="curiosity-card__icon">🎵</div>
+                        <blockquote class="curiosity-card__text">
+                            "Mozart compôs sua primeira sinfonia aos 8 anos de idade. Aos 5 anos, 
+                            ele já compunha pequenas peças musicais e as apresentava para a realeza europeia."
+                        </blockquote>
+                        <cite class="curiosity-card__source">História da Música Clássica</cite>
+                    </div>
+                    
+                    <div class="curiosity-card">
+                        <div class="curiosity-card__icon">🎹</div>
+                        <blockquote class="curiosity-card__text">
+                            "Um piano de cauda possui aproximadamente 12.000 peças individuais, 
+                            das quais 10.000 são móveis. A afinação ideal requer cerca de 230 cordas 
+                            sob uma tensão total de mais de 20 toneladas."
+                        </blockquote>
+                        <cite class="curiosity-card__source">Steinway & Sons</cite>
+                    </div>
+                </div>
+                
+                <div class="curiosities-controls">
+                    <button class="curiosities-control curiosities-control--prev" aria-label="Curiosidade anterior">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <div class="curiosities-dots">
+                        <button class="curiosities-dot curiosities-dot--active" aria-label="Curiosidade 1"></button>
+                        <button class="curiosities-dot" aria-label="Curiosidade 2"></button>
+                        <button class="curiosities-dot" aria-label="Curiosidade 3"></button>
+                    </div>
+                    <button class="curiosities-control curiosities-control--next" aria-label="Próxima curiosidade">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="section-cta">
+                    <a href="curiosidades.html" class="btn btn--outline">
+                        Ver Mais Curiosidades <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter Section -->
+        <section class="newsletter" aria-labelledby="newsletter-title">
+            <div class="container">
+                <div class="newsletter__content">
+                    <div class="newsletter__icon">📬</div>
+                    <h2 id="newsletter-title" class="newsletter__title">
+                        Fique por dentro das novidades!
+                    </h2>
+                    <p class="newsletter__description">
+                        Receba novas cifras, videoaulas e artigos diretamente no seu e-mail. 
+                        Prometemos não enviar spam!
+                    </p>
+                    <form class="newsletter__form" action="#" method="POST">
+                        <div class="newsletter__input-group">
+                            <input 
+                                type="email" 
+                                class="newsletter__input" 
+                                placeholder="Seu melhor e-mail" 
+                                required
+                                aria-label="Endereço de e-mail"
+                            >
+                            <button type="submit" class="btn btn--primary newsletter__submit">
+                                Inscrever-se
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <p class="newsletter__privacy">
+                            <i class="fas fa-lock" aria-hidden="true"></i>
+                            Seus dados estão seguros conosco.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">🎵</span>
+                        <span class="footer__logo-text">Musica<span class="footer__logo-accent">Viva</span></span>
+                    </a>
+                    <p class="footer__description">
+                        Seu portal completo para aprender música. Cifras, videoaulas, teoria musical e muito mais 
+                        para músicos de todos os níveis.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Spotify">
+                            <i class="fab fa-spotify" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <nav class="footer__nav" aria-label="Links do rodapé - Navegação">
+                    <h3 class="footer__nav-title">Navegação</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cifras.html">Cifras</a></li>
+                        <li><a href="videoaulas.html">Videoaulas</a></li>
+                        <li><a href="artigos.html">Artigos</a></li>
+                        <li><a href="dicionario.html">Dicionário</a></li>
+                        <li><a href="curiosidades.html">Curiosidades</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Links do rodapé - Categorias">
+                    <h3 class="footer__nav-title">Categorias</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="videoaulas.html#violao">Violão</a></li>
+                        <li><a href="videoaulas.html#teclado">Teclado</a></li>
+                        <li><a href="videoaulas.html#teoria">Teoria Musical</a></li>
+                        <li><a href="cifras.html#rock">Rock</a></li>
+                        <li><a href="cifras.html#mpb">MPB</a></li>
+                        <li><a href="cifras.html#gospel">Gospel</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Links do rodapé - Suporte">
+                    <h3 class="footer__nav-title">Suporte</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2026 MusicaViva. Todos os direitos reservados. 
+                    Feito com <span class="footer__heart">❤️</span> para músicos.
+                </p>
+                <p class="footer__credits">
+                    <a href="#">Política de Cookies</a> • <a href="#">Mapa do Site</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>

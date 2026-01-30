@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curiosidades musicais fascinantes: fatos surpreendentes sobre músicos lendários, instrumentos raros, recordes e histórias incríveis do mundo da música.">
+    <meta name="keywords" content="curiosidades musicais, fatos sobre música, história da música, músicos famosos, instrumentos musicais">
+    
+    <meta property="og:title" content="Curiosidades Musicais - MusicaViva">
+    <meta property="og:description" content="Descubra fatos surpreendentes sobre o mundo da música.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Curiosidades Musicais - MusicaViva</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <a href="index.html" class="header__logo" aria-label="MusicaViva - Página Inicial">
+                <span class="header__logo-icon">🎵</span>
+                <span class="header__logo-text">Musica<span class="header__logo-accent">Viva</span></span>
+            </a>
+            
+            <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="header__menu-icon"></span>
+            </button>
+            
+            <nav class="header__nav" id="main-nav" role="navigation" aria-label="Navegação principal">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="index.html" class="header__nav-link"><i class="fas fa-home" aria-hidden="true"></i><span>Início</span></a></li>
+                    <li class="header__nav-item"><a href="cifras.html" class="header__nav-link"><i class="fas fa-music" aria-hidden="true"></i><span>Cifras</span></a></li>
+                    <li class="header__nav-item"><a href="videoaulas.html" class="header__nav-link"><i class="fas fa-video" aria-hidden="true"></i><span>Videoaulas</span></a></li>
+                    <li class="header__nav-item"><a href="artigos.html" class="header__nav-link"><i class="fas fa-newspaper" aria-hidden="true"></i><span>Artigos</span></a></li>
+                    <li class="header__nav-item"><a href="dicionario.html" class="header__nav-link"><i class="fas fa-book" aria-hidden="true"></i><span>Dicionário</span></a></li>
+                    <li class="header__nav-item"><a href="curiosidades.html" class="header__nav-link header__nav-link--active" aria-current="page"><i class="fas fa-lightbulb" aria-hidden="true"></i><span>Curiosidades</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <button class="header__theme-toggle" aria-label="Alternar tema escuro/claro" title="Alternar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="header__search-toggle" aria-label="Abrir busca" title="Buscar">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="search-overlay" role="search" aria-hidden="true">
+            <div class="search-overlay__container">
+                <form class="search-overlay__form" action="#" method="GET">
+                    <input type="search" class="search-overlay__input" placeholder="Buscar curiosidades..." aria-label="Campo de busca" autocomplete="off">
+                    <button type="submit" class="search-overlay__submit" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </form>
+                <button class="search-overlay__close" aria-label="Fechar busca"><i class="fas fa-times" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main-content" role="main">
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--curiosidades">
+            <div class="page-hero__background">
+                <div class="page-hero__gradient"></div>
+            </div>
+            <div class="container">
+                <div class="page-hero__content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item"><a href="index.html">Início</a></li>
+                            <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Curiosidades</li>
+                        </ol>
+                    </nav>
+                    <h1 class="page-hero__title">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        Curiosidades Musicais
+                    </h1>
+                    <p class="page-hero__description">
+                        Descubra fatos surpreendentes sobre a música, artistas lendários, 
+                        instrumentos raros e histórias incríveis do universo musical.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Category Filter -->
+        <section class="curiosity-categories" aria-label="Categorias de curiosidades">
+            <div class="container">
+                <div class="curiosity-categories__list">
+                    <button class="curiosity-category curiosity-category--active" data-category="all">
+                        🌟 Todas
+                    </button>
+                    <button class="curiosity-category" data-category="artistas">
+                        🎤 Artistas
+                    </button>
+                    <button class="curiosity-category" data-category="instrumentos">
+                        🎸 Instrumentos
+                    </button>
+                    <button class="curiosity-category" data-category="recordes">
+                        🏆 Recordes
+                    </button>
+                    <button class="curiosity-category" data-category="ciencia">
+                        🧬 Ciência
+                    </button>
+                    <button class="curiosity-category" data-category="historia">
+                        📜 História
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Curiosity -->
+        <section class="featured-curiosity" aria-labelledby="featured-curiosity-title">
+            <div class="container">
+                <article class="curiosity-hero">
+                    <div class="curiosity-hero__badge">💡 Você Sabia?</div>
+                    <h2 id="featured-curiosity-title" class="curiosity-hero__title">
+                        Beethoven continuou compondo obras-primas mesmo após ficar completamente surdo
+                    </h2>
+                    <p class="curiosity-hero__text">
+                        Ludwig van Beethoven começou a perder a audição aos 26 anos e ficou completamente surdo 
+                        por volta dos 44. Ainda assim, algumas de suas obras mais aclamadas, incluindo a 
+                        <strong>9ª Sinfonia</strong> (com o famoso "Ode à Alegria"), foram compostas quando ele 
+                        já não conseguia ouvir uma única nota. Ele colocava uma vara de metal no piano e a 
+                        segurava entre os dentes para sentir as vibrações das notas.
+                    </p>
+                    <div class="curiosity-hero__meta">
+                        <span class="curiosity-hero__category">
+                            <i class="fas fa-tag" aria-hidden="true"></i> Artistas
+                        </span>
+                        <span class="curiosity-hero__share">
+                            <button class="share-btn" aria-label="Compartilhar">
+                                <i class="fas fa-share-alt" aria-hidden="true"></i> Compartilhar
+                            </button>
+                        </span>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Curiosities Grid -->
+        <section class="curiosities-section" aria-labelledby="curiosities-section-title">
+            <div class="container">
+                <h2 id="curiosities-section-title" class="sr-only">Lista de Curiosidades</h2>
+                
+                <div class="curiosities-grid">
+                    <!-- Curiosity 1 -->
+                    <article class="curiosity-card" data-category="instrumentos">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">🎸</span>
+                            <span class="curiosity-card__category">Instrumentos</span>
+                        </div>
+                        <h3 class="curiosity-card__title">A guitarra mais cara do mundo</h3>
+                        <p class="curiosity-card__text">
+                            A guitarra "Reach Out to Asia" Fender Stratocaster foi vendida por 
+                            <strong>$2.7 milhões</strong> em 2005. Foi assinada por lendas como 
+                            Eric Clapton, Jimmy Page, Mick Jagger, Keith Richards, Brian May, 
+                            David Gilmour, Jeff Beck, Pete Townshend, e Paul McCartney. 
+                            O valor foi destinado às vítimas do tsunami de 2004.
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>234</span>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Curiosity 2 -->
+                    <article class="curiosity-card" data-category="artistas">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">🎤</span>
+                            <span class="curiosity-card__category">Artistas</span>
+                        </div>
+                        <h3 class="curiosity-card__title">Mozart: O prodígio que começou aos 5 anos</h3>
+                        <p class="curiosity-card__text">
+                            Wolfgang Amadeus Mozart compôs sua primeira peça musical aos 
+                            <strong>5 anos de idade</strong> e sua primeira sinfonia aos 8. 
+                            Durante sua curta vida (morreu aos 35), compôs mais de 
+                            <strong>600 obras</strong>, incluindo 41 sinfonias, 27 concertos 
+                            para piano e várias óperas que são executadas até hoje.
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>567</span>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Curiosity 3 -->
+                    <article class="curiosity-card" data-category="ciencia">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">🧬</span>
+                            <span class="curiosity-card__category">Ciência</span>
+                        </div>
+                        <h3 class="curiosity-card__title">Música faz o cérebro liberar dopamina</h3>
+                        <p class="curiosity-card__text">
+                            Estudos científicos comprovam que ouvir música que gostamos faz o 
+                            cérebro liberar <strong>dopamina</strong>, o mesmo neurotransmissor 
+                            associado a recompensas como comida e atividades prazerosas. 
+                            Aquela sensação de "arrepio" ao ouvir uma música é literalmente 
+                            uma resposta química do seu cérebro!
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>892</span>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Curiosity 4 -->
+                    <article class="curiosity-card" data-category="recordes">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">🏆</span>
+                            <span class="curiosity-card__category">Recordes</span>
+                        </div>
+                        <h3 class="curiosity-card__title">O show mais longo da história</h3>
+                        <p class="curiosity-card__text">
+                            O recorde do show mais longo já realizado pertence ao músico 
+                            <strong>Gonzales</strong>, que tocou piano por incríveis 
+                            <strong>27 horas, 3 minutos e 44 segundos</strong> seguidos 
+                            em Paris, em 2009. Durante a maratona, ele interpretou mais de 
+                            300 músicas diferentes.
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>445</span>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Curiosity 5 -->
+                    <article class="curiosity-card" data-category="instrumentos">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">🎹</span>
+                            <span class="curiosity-card__category">Instrumentos</span>
+                        </div>
+                        <h3 class="curiosity-card__title">Um piano tem mais de 12.000 peças</h3>
+                        <p class="curiosity-card__text">
+                            Um piano de cauda possui aproximadamente <strong>12.000 peças individuais</strong>, 
+                            das quais cerca de 10.000 são móveis. A tensão total das cordas 
+                            de um piano pode chegar a <strong>20 toneladas</strong> – equivalente 
+                            ao peso de um caminhão! Por isso a estrutura precisa ser tão robusta.
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>378</span>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Curiosity 6 -->
+                    <article class="curiosity-card" data-category="historia">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">📜</span>
+                            <span class="curiosity-card__category">História</span>
+                        </div>
+                        <h3 class="curiosity-card__title">A música mais antiga conhecida</h3>
+                        <p class="curiosity-card__text">
+                            A composição musical mais antiga conhecida é o <strong>"Hino Hurrita nº 6"</strong>, 
+                            encontrado em tábuas de argila na antiga cidade de Ugarit (atual Síria). 
+                            Datando de aproximadamente <strong>1400 a.C.</strong>, ela tem mais de 
+                            3.400 anos e foi escrita para lira.
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>612</span>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Curiosity 7 -->
+                    <article class="curiosity-card" data-category="artistas">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">👑</span>
+                            <span class="curiosity-card__category">Artistas</span>
+                        </div>
+                        <h3 class="curiosity-card__title">Freddie Mercury tinha 4 oitavas vocais</h3>
+                        <p class="curiosity-card__text">
+                            Freddie Mercury, vocalista do Queen, possuía uma extensão vocal de 
+                            quase <strong>4 oitavas</strong> (do Fa grave ao Fa soprano). 
+                            Estudos científicos posteriores revelaram que ele conseguia produzir 
+                            vibrações em suas pregas vocais a uma velocidade muito maior que 
+                            cantores típicos, criando seu timbre único e inconfundível.
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>1.2k</span>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Curiosity 8 -->
+                    <article class="curiosity-card" data-category="ciencia">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">🌱</span>
+                            <span class="curiosity-card__category">Ciência</span>
+                        </div>
+                        <h3 class="curiosity-card__title">Plantas crescem mais com música clássica</h3>
+                        <p class="curiosity-card__text">
+                            Diversos estudos demonstram que plantas expostas à música clássica 
+                            tendem a crescer <strong>mais rápido</strong> e de forma mais saudável. 
+                            As vibrações sonoras parecem estimular a produção de citoplasma, 
+                            acelerando o metabolismo das plantas. Música pesada com muitos 
+                            graves, por outro lado, pode ter efeito contrário!
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>534</span>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Curiosity 9 -->
+                    <article class="curiosity-card" data-category="recordes">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">📀</span>
+                            <span class="curiosity-card__category">Recordes</span>
+                        </div>
+                        <h3 class="curiosity-card__title">Thriller: O álbum mais vendido de todos os tempos</h3>
+                        <p class="curiosity-card__text">
+                            <strong>"Thriller"</strong> de Michael Jackson permanece como o álbum 
+                            mais vendido da história, com estimativas de <strong>70 milhões de cópias</strong> 
+                            vendidas mundialmente. O videoclipe da faixa-título revolucionou 
+                            a indústria musical e é considerado o melhor videoclipe já produzido.
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>987</span>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Curiosity 10 -->
+                    <article class="curiosity-card" data-category="historia">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">🎺</span>
+                            <span class="curiosity-card__category">História</span>
+                        </div>
+                        <h3 class="curiosity-card__title">O blues nasceu no Mississippi</h3>
+                        <p class="curiosity-card__text">
+                            O blues surgiu no <strong>Delta do Mississippi</strong> no final do 
+                            século XIX, criado por trabalhadores afro-americanos nas plantações. 
+                            Este gênero é considerado a <strong>raiz de quase toda música popular moderna</strong>, 
+                            incluindo rock, jazz, R&B, soul e até mesmo hip-hop.
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>423</span>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Curiosity 11 -->
+                    <article class="curiosity-card" data-category="instrumentos">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">🎻</span>
+                            <span class="curiosity-card__category">Instrumentos</span>
+                        </div>
+                        <h3 class="curiosity-card__title">Os violinos Stradivarius</h3>
+                        <p class="curiosity-card__text">
+                            Os violinos criados por <strong>Antonio Stradivari</strong> no século XVII 
+                            são considerados os melhores do mundo. Apenas cerca de <strong>650 instrumentos</strong> 
+                            sobrevivem hoje, e um Stradivarius pode custar mais de 
+                            <strong>$15 milhões</strong>. Cientistas ainda não conseguiram 
+                            replicar perfeitamente seu som único.
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>756</span>
+                            </button>
+                        </div>
+                    </article>
+                    
+                    <!-- Curiosity 12 -->
+                    <article class="curiosity-card" data-category="ciencia">
+                        <div class="curiosity-card__header">
+                            <span class="curiosity-card__icon">💪</span>
+                            <span class="curiosity-card__category">Ciência</span>
+                        </div>
+                        <h3 class="curiosity-card__title">Música melhora performance física</h3>
+                        <p class="curiosity-card__text">
+                            Pesquisas mostram que ouvir música durante exercícios pode 
+                            aumentar a resistência em até <strong>15%</strong>. O ritmo da música 
+                            sincroniza com os movimentos do corpo, reduzindo a percepção de 
+                            esforço. Músicas entre <strong>120-140 BPM</strong> são ideais 
+                            para atividades de alta intensidade.
+                        </p>
+                        <div class="curiosity-card__footer">
+                            <button class="curiosity-card__like" aria-label="Curtir">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                                <span>645</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Load More -->
+                <div class="curiosities-load-more">
+                    <button class="btn btn--outline btn--lg">
+                        <i class="fas fa-sync-alt" aria-hidden="true"></i> Carregar mais curiosidades
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Fun Facts Ticker -->
+        <section class="fun-facts-ticker" aria-label="Fatos rápidos">
+            <div class="container">
+                <h2 class="fun-facts-ticker__title">⚡ Fatos Rápidos</h2>
+                <div class="ticker-wrapper">
+                    <div class="ticker">
+                        <div class="ticker__item">🎵 Uma pessoa média ouve cerca de 18.000 músicas na vida</div>
+                        <div class="ticker__item">🎸 Jimi Hendrix era canhoto mas tocava guitarras de destro invertidas</div>
+                        <div class="ticker__item">🎹 O órgão de tubos é o maior instrumento musical do mundo</div>
+                        <div class="ticker__item">🎤 "Happy Birthday" foi a primeira música cantada no espaço</div>
+                        <div class="ticker__item">🎻 Um arco de violino é feito com cerca de 150 fios de crina de cavalo</div>
+                        <div class="ticker__item">📻 A primeira transmissão de rádio comercial foi em 1920</div>
+                        <div class="ticker__item">🥁 A bateria como conhecemos hoje só foi inventada em 1909</div>
+                        <div class="ticker__item">🎷 O saxofone foi inventado por Adolphe Sax em 1846</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz Teaser -->
+        <section class="quiz-teaser" aria-labelledby="quiz-title">
+            <div class="container">
+                <div class="quiz-teaser__content">
+                    <div class="quiz-teaser__icon">🧠</div>
+                    <h2 id="quiz-title" class="quiz-teaser__title">Teste seus conhecimentos!</h2>
+                    <p class="quiz-teaser__text">
+                        Você é um verdadeiro conhecedor de música? Desafie-se com nosso quiz 
+                        de curiosidades musicais e descubra quanto você realmente sabe!
+                    </p>
+                    <button class="btn btn--primary btn--lg quiz-teaser__btn" id="start-quiz">
+                        <i class="fas fa-play" aria-hidden="true"></i> Iniciar Quiz
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Quiz Modal -->
+        <div class="quiz-modal" id="quiz-modal" role="dialog" aria-modal="true" aria-labelledby="quiz-modal-title" hidden>
+            <div class="quiz-modal__overlay"></div>
+            <div class="quiz-modal__container">
+                <button class="quiz-modal__close" aria-label="Fechar quiz">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+                
+                <div class="quiz-modal__content" id="quiz-content">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress__bar" style="width: 0%"></div>
+                    </div>
+                    <p class="quiz-question-number">Pergunta <span id="current-question">1</span> de <span id="total-questions">5</span></p>
+                    <h3 id="quiz-modal-title" class="quiz-question">Qual artista é conhecido como o "Rei do Pop"?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-answer="a">Elvis Presley</button>
+                        <button class="quiz-option" data-answer="b">Michael Jackson</button>
+                        <button class="quiz-option" data-answer="c">Prince</button>
+                        <button class="quiz-option" data-answer="d">Freddie Mercury</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-result" id="quiz-result" hidden>
+                    <div class="quiz-result__icon">🎉</div>
+                    <h3 class="quiz-result__title">Parabéns!</h3>
+                    <p class="quiz-result__score">Você acertou <strong id="score">4</strong> de 5 perguntas!</p>
+                    <p class="quiz-result__message">Você é um verdadeiro conhecedor de música!</p>
+                    <button class="btn btn--primary quiz-result__btn" id="restart-quiz">
+                        <i class="fas fa-redo" aria-hidden="true"></i> Jogar Novamente
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">🎵</span>
+                        <span class="footer__logo-text">Musica<span class="footer__logo-accent">Viva</span></span>
+                    </a>
+                    <p class="footer__description">
+                        Seu portal completo para aprender música. Cifras, videoaulas, teoria musical e muito mais.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <nav class="footer__nav" aria-label="Links do rodapé">
+                    <h3 class="footer__nav-title">Navegação</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cifras.html">Cifras</a></li>
+                        <li><a href="videoaulas.html">Videoaulas</a></li>
+                        <li><a href="artigos.html">Artigos</a></li>
+                        <li><a href="dicionario.html">Dicionário</a></li>
+                        <li><a href="curiosidades.html">Curiosidades</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Categorias">
+                    <h3 class="footer__nav-title">Categorias</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">Artistas</a></li>
+                        <li><a href="#">Instrumentos</a></li>
+                        <li><a href="#">Recordes</a></li>
+                        <li><a href="#">Ciência</a></li>
+                        <li><a href="#">História</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Suporte">
+                    <h3 class="footer__nav-title">Suporte</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 MusicaViva. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <button class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    
+    <script src="js/main.js" defer></script>
+    <script src="js/curiosidades.js" defer></script>
+</body>
+</html>

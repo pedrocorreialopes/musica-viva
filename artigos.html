@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artigos sobre música: história, técnicas, equipamentos, produção musical e muito mais. Conteúdo aprofundado para músicos de todos os níveis.">
+    <meta name="keywords" content="artigos música, história da música, técnicas musicais, equipamentos, produção musical">
+    
+    <meta property="og:title" content="Artigos sobre Música - MusicaViva">
+    <meta property="og:description" content="Conteúdo aprofundado sobre música: história, técnicas, equipamentos e produção.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Artigos sobre Música - MusicaViva</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <a href="index.html" class="header__logo" aria-label="MusicaViva - Página Inicial">
+                <span class="header__logo-icon">🎵</span>
+                <span class="header__logo-text">Musica<span class="header__logo-accent">Viva</span></span>
+            </a>
+            
+            <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="header__menu-icon"></span>
+            </button>
+            
+            <nav class="header__nav" id="main-nav" role="navigation" aria-label="Navegação principal">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="index.html" class="header__nav-link"><i class="fas fa-home" aria-hidden="true"></i><span>Início</span></a></li>
+                    <li class="header__nav-item"><a href="cifras.html" class="header__nav-link"><i class="fas fa-music" aria-hidden="true"></i><span>Cifras</span></a></li>
+                    <li class="header__nav-item"><a href="videoaulas.html" class="header__nav-link"><i class="fas fa-video" aria-hidden="true"></i><span>Videoaulas</span></a></li>
+                    <li class="header__nav-item"><a href="artigos.html" class="header__nav-link header__nav-link--active" aria-current="page"><i class="fas fa-newspaper" aria-hidden="true"></i><span>Artigos</span></a></li>
+                    <li class="header__nav-item"><a href="dicionario.html" class="header__nav-link"><i class="fas fa-book" aria-hidden="true"></i><span>Dicionário</span></a></li>
+                    <li class="header__nav-item"><a href="curiosidades.html" class="header__nav-link"><i class="fas fa-lightbulb" aria-hidden="true"></i><span>Curiosidades</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <button class="header__theme-toggle" aria-label="Alternar tema escuro/claro" title="Alternar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="header__search-toggle" aria-label="Abrir busca" title="Buscar">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="search-overlay" role="search" aria-hidden="true">
+            <div class="search-overlay__container">
+                <form class="search-overlay__form" action="#" method="GET">
+                    <input type="search" class="search-overlay__input" placeholder="Buscar artigos..." aria-label="Campo de busca" autocomplete="off">
+                    <button type="submit" class="search-overlay__submit" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </form>
+                <button class="search-overlay__close" aria-label="Fechar busca"><i class="fas fa-times" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main-content" role="main">
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--artigos">
+            <div class="page-hero__background">
+                <div class="page-hero__gradient"></div>
+            </div>
+            <div class="container">
+                <div class="page-hero__content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item"><a href="index.html">Início</a></li>
+                            <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Artigos</li>
+                        </ol>
+                    </nav>
+                    <h1 class="page-hero__title">
+                        <i class="fas fa-newspaper" aria-hidden="true"></i>
+                        Artigos sobre Música
+                    </h1>
+                    <p class="page-hero__description">
+                        Conteúdo aprofundado sobre história da música, técnicas, equipamentos, 
+                        produção musical e tudo que você precisa para expandir seus horizontes musicais.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Category Pills -->
+        <section class="article-categories" aria-label="Categorias de artigos">
+            <div class="container">
+                <div class="article-categories__list">
+                    <button class="article-category article-category--active" data-category="all">
+                        <i class="fas fa-th-large" aria-hidden="true"></i> Todos
+                    </button>
+                    <button class="article-category" data-category="historia">
+                        <i class="fas fa-history" aria-hidden="true"></i> História
+                    </button>
+                    <button class="article-category" data-category="tecnica">
+                        <i class="fas fa-guitar" aria-hidden="true"></i> Técnica
+                    </button>
+                    <button class="article-category" data-category="equipamentos">
+                        <i class="fas fa-sliders-h" aria-hidden="true"></i> Equipamentos
+                    </button>
+                    <button class="article-category" data-category="producao">
+                        <i class="fas fa-headphones" aria-hidden="true"></i> Produção
+                    </button>
+                    <button class="article-category" data-category="ciencia">
+                        <i class="fas fa-brain" aria-hidden="true"></i> Ciência
+                    </button>
+                    <button class="article-category" data-category="biografias">
+                        <i class="fas fa-user" aria-hidden="true"></i> Biografias
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Article -->
+        <section class="featured-article" aria-labelledby="featured-article-title">
+            <div class="container">
+                <article class="article-featured" id="neurociencia-musica">
+                    <div class="article-featured__image">
+                        <div class="article-featured__placeholder">
+                            <i class="fas fa-brain" aria-hidden="true"></i>
+                        </div>
+                        <span class="article-featured__category">Ciência</span>
+                    </div>
+                    <div class="article-featured__content">
+                        <div class="article-featured__meta">
+                            <span class="article-featured__date">
+                                <i class="fas fa-calendar" aria-hidden="true"></i> 28 Janeiro 2026
+                            </span>
+                            <span class="article-featured__read-time">
+                                <i class="fas fa-clock" aria-hidden="true"></i> 8 min de leitura
+                            </span>
+                        </div>
+                        <h2 id="featured-article-title" class="article-featured__title">
+                            Como a música afeta o cérebro: A neurociência por trás das melodias
+                        </h2>
+                        <p class="article-featured__excerpt">
+                            Descubra como diferentes gêneros musicais ativam áreas específicas do cérebro e como isso pode 
+                            melhorar sua criatividade, memória e aprendizado. Estudos recentes revelam conexões fascinantes 
+                            entre a música e o funcionamento cerebral, mostrando por que certas melodias nos emocionam 
+                            profundamente enquanto outras nos energizam.
+                        </p>
+                        <div class="article-featured__tags">
+                            <span class="article-tag">Neurociência</span>
+                            <span class="article-tag">Psicologia</span>
+                            <span class="article-tag">Pesquisa</span>
+                        </div>
+                        <a href="#" class="btn btn--primary article-featured__cta">
+                            Ler Artigo Completo <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Articles Grid -->
+        <section class="articles-section" aria-labelledby="articles-section-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="articles-section-title" class="section-header__title">
+                        Últimos <span class="text-gradient">Artigos</span>
+                    </h2>
+                </header>
+                
+                <div class="articles-grid-full">
+                    <!-- Article 1 -->
+                    <article class="article-card-full" data-category="equipamentos" id="escolher-violao">
+                        <div class="article-card-full__image">
+                            <div class="article-card-full__placeholder">
+                                <i class="fas fa-guitar" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card-full__content">
+                            <div class="article-card-full__meta">
+                                <span class="article-card-full__category">Equipamentos</span>
+                                <span class="article-card-full__date">25 Jan 2026</span>
+                            </div>
+                            <h3 class="article-card-full__title">
+                                <a href="#">Guia completo: Como escolher seu primeiro violão</a>
+                            </h3>
+                            <p class="article-card-full__excerpt">
+                                Nylon ou aço? Cutway ou não? Eletroacústico? Descubra tudo que você precisa saber 
+                                antes de comprar seu primeiro instrumento e evite erros comuns de iniciantes.
+                            </p>
+                            <div class="article-card-full__footer">
+                                <span class="article-card-full__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 6 min
+                                </span>
+                                <a href="#" class="article-card-full__link">
+                                    Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 2 -->
+                    <article class="article-card-full" data-category="historia" id="historia-rock">
+                        <div class="article-card-full__image">
+                            <div class="article-card-full__placeholder">
+                                <i class="fas fa-record-vinyl" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card-full__content">
+                            <div class="article-card-full__meta">
+                                <span class="article-card-full__category">História</span>
+                                <span class="article-card-full__date">22 Jan 2026</span>
+                            </div>
+                            <h3 class="article-card-full__title">
+                                <a href="#">A evolução do Rock: De Elvis a hoje</a>
+                            </h3>
+                            <p class="article-card-full__excerpt">
+                                Uma viagem através das décadas que moldaram o gênero mais influente da música moderna. 
+                                Do rock and roll dos anos 50 ao indie rock contemporâneo.
+                            </p>
+                            <div class="article-card-full__footer">
+                                <span class="article-card-full__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 12 min
+                                </span>
+                                <a href="#" class="article-card-full__link">
+                                    Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 3 -->
+                    <article class="article-card-full" data-category="tecnica" id="tecnica-vocal">
+                        <div class="article-card-full__image">
+                            <div class="article-card-full__placeholder">
+                                <i class="fas fa-microphone" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card-full__content">
+                            <div class="article-card-full__meta">
+                                <span class="article-card-full__category">Técnica</span>
+                                <span class="article-card-full__date">20 Jan 2026</span>
+                            </div>
+                            <h3 class="article-card-full__title">
+                                <a href="#">10 exercícios para melhorar sua técnica vocal</a>
+                            </h3>
+                            <p class="article-card-full__excerpt">
+                                Exercícios práticos e comprovados para desenvolver sua voz, aumentar a extensão vocal 
+                                e cantar com mais confiança e precisão.
+                            </p>
+                            <div class="article-card-full__footer">
+                                <span class="article-card-full__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 5 min
+                                </span>
+                                <a href="#" class="article-card-full__link">
+                                    Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 4 -->
+                    <article class="article-card-full" data-category="producao">
+                        <div class="article-card-full__image">
+                            <div class="article-card-full__placeholder">
+                                <i class="fas fa-sliders-h" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card-full__content">
+                            <div class="article-card-full__meta">
+                                <span class="article-card-full__category">Produção</span>
+                                <span class="article-card-full__date">18 Jan 2026</span>
+                            </div>
+                            <h3 class="article-card-full__title">
+                                <a href="#">Home Studio: Monte seu estúdio com pouco investimento</a>
+                            </h3>
+                            <p class="article-card-full__excerpt">
+                                Guia prático para montar um home studio funcional gastando menos de R$3.000. 
+                                Equipamentos essenciais e dicas de tratamento acústico caseiro.
+                            </p>
+                            <div class="article-card-full__footer">
+                                <span class="article-card-full__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 10 min
+                                </span>
+                                <a href="#" class="article-card-full__link">
+                                    Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 5 -->
+                    <article class="article-card-full" data-category="biografias">
+                        <div class="article-card-full__image">
+                            <div class="article-card-full__placeholder">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card-full__content">
+                            <div class="article-card-full__meta">
+                                <span class="article-card-full__category">Biografias</span>
+                                <span class="article-card-full__date">15 Jan 2026</span>
+                            </div>
+                            <h3 class="article-card-full__title">
+                                <a href="#">Beethoven: O gênio que revolucionou a música mesmo surdo</a>
+                            </h3>
+                            <p class="article-card-full__excerpt">
+                                A história inspiradora do compositor que perdeu a audição aos 26 anos mas continuou 
+                                criando algumas das obras mais importantes da música clássica.
+                            </p>
+                            <div class="article-card-full__footer">
+                                <span class="article-card-full__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 8 min
+                                </span>
+                                <a href="#" class="article-card-full__link">
+                                    Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 6 -->
+                    <article class="article-card-full" data-category="tecnica">
+                        <div class="article-card-full__image">
+                            <div class="article-card-full__placeholder">
+                                <i class="fas fa-hand-paper" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card-full__content">
+                            <div class="article-card-full__meta">
+                                <span class="article-card-full__category">Técnica</span>
+                                <span class="article-card-full__date">12 Jan 2026</span>
+                            </div>
+                            <h3 class="article-card-full__title">
+                                <a href="#">Escalas Pentatônicas: O segredo para improvisar como um profissional</a>
+                            </h3>
+                            <p class="article-card-full__excerpt">
+                                Aprenda por que as pentatônicas são as escalas preferidas dos guitarristas de blues e rock, 
+                                e como usá-las para criar solos memoráveis.
+                            </p>
+                            <div class="article-card-full__footer">
+                                <span class="article-card-full__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 7 min
+                                </span>
+                                <a href="#" class="article-card-full__link">
+                                    Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 7 -->
+                    <article class="article-card-full" data-category="historia">
+                        <div class="article-card-full__image">
+                            <div class="article-card-full__placeholder">
+                                🇧🇷
+                            </div>
+                        </div>
+                        <div class="article-card-full__content">
+                            <div class="article-card-full__meta">
+                                <span class="article-card-full__category">História</span>
+                                <span class="article-card-full__date">10 Jan 2026</span>
+                            </div>
+                            <h3 class="article-card-full__title">
+                                <a href="#">A história da Bossa Nova: O ritmo que conquistou o mundo</a>
+                            </h3>
+                            <p class="article-card-full__excerpt">
+                                Como um grupo de jovens cariocas nos anos 50 criou um gênero que influenciou 
+                                a música mundial e transformou Tom Jobim em lenda internacional.
+                            </p>
+                            <div class="article-card-full__footer">
+                                <span class="article-card-full__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 9 min
+                                </span>
+                                <a href="#" class="article-card-full__link">
+                                    Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 8 -->
+                    <article class="article-card-full" data-category="equipamentos">
+                        <div class="article-card-full__image">
+                            <div class="article-card-full__placeholder">
+                                <i class="fas fa-plug" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card-full__content">
+                            <div class="article-card-full__meta">
+                                <span class="article-card-full__category">Equipamentos</span>
+                                <span class="article-card-full__date">08 Jan 2026</span>
+                            </div>
+                            <h3 class="article-card-full__title">
+                                <a href="#">Pedais de efeito: Guia completo para guitarristas</a>
+                            </h3>
+                            <p class="article-card-full__excerpt">
+                                Overdrive, distortion, fuzz, delay, reverb... Entenda cada tipo de pedal, 
+                                como montar seu pedalboard e criar seu som único.
+                            </p>
+                            <div class="article-card-full__footer">
+                                <span class="article-card-full__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 15 min
+                                </span>
+                                <a href="#" class="article-card-full__link">
+                                    Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 9 -->
+                    <article class="article-card-full" data-category="ciencia">
+                        <div class="article-card-full__image">
+                            <div class="article-card-full__placeholder">
+                                <i class="fas fa-wave-square" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="article-card-full__content">
+                            <div class="article-card-full__meta">
+                                <span class="article-card-full__category">Ciência</span>
+                                <span class="article-card-full__date">05 Jan 2026</span>
+                            </div>
+                            <h3 class="article-card-full__title">
+                                <a href="#">A física do som: Por que alguns instrumentos soam diferentes</a>
+                            </h3>
+                            <p class="article-card-full__excerpt">
+                                Entenda os conceitos de frequência, harmônicos, timbre e ressonância que explicam 
+                                por que um violão soa diferente de um piano tocando a mesma nota.
+                            </p>
+                            <div class="article-card-full__footer">
+                                <span class="article-card-full__read-time">
+                                    <i class="fas fa-clock" aria-hidden="true"></i> 6 min
+                                </span>
+                                <a href="#" class="article-card-full__link">
+                                    Ler mais <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Load More -->
+                <div class="articles-load-more">
+                    <button class="btn btn--outline btn--lg">
+                        <i class="fas fa-plus" aria-hidden="true"></i> Carregar mais artigos
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter Section -->
+        <section class="newsletter newsletter--compact" aria-labelledby="newsletter-title">
+            <div class="container">
+                <div class="newsletter__content">
+                    <div class="newsletter__icon">📚</div>
+                    <h2 id="newsletter-title" class="newsletter__title">
+                        Receba novos artigos por e-mail
+                    </h2>
+                    <p class="newsletter__description">
+                        Seja notificado quando publicarmos novos conteúdos. Sem spam, prometemos!
+                    </p>
+                    <form class="newsletter__form" action="#" method="POST">
+                        <div class="newsletter__input-group">
+                            <input 
+                                type="email" 
+                                class="newsletter__input" 
+                                placeholder="Seu melhor e-mail" 
+                                required
+                                aria-label="Endereço de e-mail"
+                            >
+                            <button type="submit" class="btn btn--primary newsletter__submit">
+                                Inscrever-se
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">🎵</span>
+                        <span class="footer__logo-text">Musica<span class="footer__logo-accent">Viva</span></span>
+                    </a>
+                    <p class="footer__description">
+                        Seu portal completo para aprender música. Cifras, videoaulas, teoria musical e muito mais.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <nav class="footer__nav" aria-label="Links do rodapé">
+                    <h3 class="footer__nav-title">Navegação</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cifras.html">Cifras</a></li>
+                        <li><a href="videoaulas.html">Videoaulas</a></li>
+                        <li><a href="artigos.html">Artigos</a></li>
+                        <li><a href="dicionario.html">Dicionário</a></li>
+                        <li><a href="curiosidades.html">Curiosidades</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Categorias">
+                    <h3 class="footer__nav-title">Categorias</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">História</a></li>
+                        <li><a href="#">Técnica</a></li>
+                        <li><a href="#">Equipamentos</a></li>
+                        <li><a href="#">Produção</a></li>
+                        <li><a href="#">Biografias</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Suporte">
+                    <h3 class="footer__nav-title">Suporte</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 MusicaViva. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <button class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    
+    <script src="js/main.js" defer></script>
+</body>
+</html>

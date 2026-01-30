@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dicionário de acordes completo para violão e teclado. Diagramas interativos, posições alternativas e áudio de referência para centenas de acordes.">
+    <meta name="keywords" content="dicionário de acordes, acordes violão, acordes teclado, diagramas de acordes, cifras">
+    
+    <meta property="og:title" content="Dicionário de Acordes - MusicaViva">
+    <meta property="og:description" content="Consulte centenas de acordes para violão e teclado com diagramas interativos.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Dicionário de Acordes - MusicaViva</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <a href="index.html" class="header__logo" aria-label="MusicaViva - Página Inicial">
+                <span class="header__logo-icon">🎵</span>
+                <span class="header__logo-text">Musica<span class="header__logo-accent">Viva</span></span>
+            </a>
+            
+            <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="header__menu-icon"></span>
+            </button>
+            
+            <nav class="header__nav" id="main-nav" role="navigation" aria-label="Navegação principal">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="index.html" class="header__nav-link"><i class="fas fa-home" aria-hidden="true"></i><span>Início</span></a></li>
+                    <li class="header__nav-item"><a href="cifras.html" class="header__nav-link"><i class="fas fa-music" aria-hidden="true"></i><span>Cifras</span></a></li>
+                    <li class="header__nav-item"><a href="videoaulas.html" class="header__nav-link"><i class="fas fa-video" aria-hidden="true"></i><span>Videoaulas</span></a></li>
+                    <li class="header__nav-item"><a href="artigos.html" class="header__nav-link"><i class="fas fa-newspaper" aria-hidden="true"></i><span>Artigos</span></a></li>
+                    <li class="header__nav-item"><a href="dicionario.html" class="header__nav-link header__nav-link--active" aria-current="page"><i class="fas fa-book" aria-hidden="true"></i><span>Dicionário</span></a></li>
+                    <li class="header__nav-item"><a href="curiosidades.html" class="header__nav-link"><i class="fas fa-lightbulb" aria-hidden="true"></i><span>Curiosidades</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <button class="header__theme-toggle" aria-label="Alternar tema escuro/claro" title="Alternar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="header__search-toggle" aria-label="Abrir busca" title="Buscar">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="search-overlay" role="search" aria-hidden="true">
+            <div class="search-overlay__container">
+                <form class="search-overlay__form" action="#" method="GET">
+                    <input type="search" class="search-overlay__input" placeholder="Buscar acordes..." aria-label="Campo de busca" autocomplete="off">
+                    <button type="submit" class="search-overlay__submit" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </form>
+                <button class="search-overlay__close" aria-label="Fechar busca"><i class="fas fa-times" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main-content" role="main">
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--dicionario">
+            <div class="page-hero__background">
+                <div class="page-hero__gradient"></div>
+            </div>
+            <div class="container">
+                <div class="page-hero__content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item"><a href="index.html">Início</a></li>
+                            <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Dicionário</li>
+                        </ol>
+                    </nav>
+                    <h1 class="page-hero__title">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                        Dicionário de Acordes
+                    </h1>
+                    <p class="page-hero__description">
+                        Consulte diagramas de acordes para violão e teclado. 
+                        Clique em qualquer acorde para ver posições alternativas e ouvir o som.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Instrument Selector -->
+        <section class="instrument-selector" aria-label="Seleção de instrumento">
+            <div class="container">
+                <div class="instrument-tabs" role="tablist" aria-label="Escolha o instrumento">
+                    <button class="instrument-tab instrument-tab--active" role="tab" aria-selected="true" aria-controls="violao-panel" id="violao-tab">
+                        <span class="instrument-tab__icon">🎸</span>
+                        <span class="instrument-tab__text">Violão</span>
+                    </button>
+                    <button class="instrument-tab" role="tab" aria-selected="false" aria-controls="teclado-panel" id="teclado-tab">
+                        <span class="instrument-tab__icon">🎹</span>
+                        <span class="instrument-tab__text">Teclado</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Note Selector -->
+        <section class="note-selector" aria-label="Seleção de nota">
+            <div class="container">
+                <h2 class="note-selector__title">Selecione a nota fundamental:</h2>
+                <div class="note-buttons" role="group" aria-label="Notas musicais">
+                    <button class="note-btn note-btn--active" data-note="C">C (Dó)</button>
+                    <button class="note-btn" data-note="C#">C# / Db</button>
+                    <button class="note-btn" data-note="D">D (Ré)</button>
+                    <button class="note-btn" data-note="D#">D# / Eb</button>
+                    <button class="note-btn" data-note="E">E (Mi)</button>
+                    <button class="note-btn" data-note="F">F (Fá)</button>
+                    <button class="note-btn" data-note="F#">F# / Gb</button>
+                    <button class="note-btn" data-note="G">G (Sol)</button>
+                    <button class="note-btn" data-note="G#">G# / Ab</button>
+                    <button class="note-btn" data-note="A">A (Lá)</button>
+                    <button class="note-btn" data-note="A#">A# / Bb</button>
+                    <button class="note-btn" data-note="B">B (Si)</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Chord Types -->
+        <section class="chord-types-section" aria-label="Tipos de acordes">
+            <div class="container">
+                <h2 class="chord-types-section__title">Tipos de Acordes para <span id="selected-note">C</span></h2>
+                
+                <!-- Violão Panel -->
+                <div id="violao-panel" role="tabpanel" aria-labelledby="violao-tab" class="chord-panel">
+                    <div class="chord-grid">
+                        <!-- Maior -->
+                        <article class="chord-card" data-chord="C" data-type="major">
+                            <div class="chord-card__header">
+                                <h3 class="chord-card__name">C</h3>
+                                <span class="chord-card__fullname">Dó Maior</span>
+                            </div>
+                            <div class="chord-card__diagram">
+                                <svg class="chord-svg" viewBox="0 0 120 150" aria-label="Diagrama do acorde C maior">
+                                    <!-- Nut (pestana) -->
+                                    <rect x="15" y="20" width="90" height="5" fill="currentColor"/>
+                                    <!-- Frets -->
+                                    <line x1="15" y1="45" x2="105" y2="45" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="70" x2="105" y2="70" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="95" x2="105" y2="95" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="120" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <!-- Strings -->
+                                    <line x1="15" y1="25" x2="15" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="33" y1="25" x2="33" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="51" y1="25" x2="51" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="69" y1="25" x2="69" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="87" y1="25" x2="87" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="105" y1="25" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <!-- Finger positions -->
+                                    <circle cx="33" cy="32" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="69" cy="57" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="51" cy="82" r="8" fill="var(--color-primary)"/>
+                                    <!-- Open strings -->
+                                    <circle cx="87" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="105" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <!-- Muted string -->
+                                    <text x="15" y="15" font-size="12" text-anchor="middle" fill="currentColor">✕</text>
+                                </svg>
+                            </div>
+                            <div class="chord-card__info">
+                                <span class="chord-card__fingers">Dedos: 1-2-3</span>
+                                <button class="chord-card__play" aria-label="Ouvir acorde C">
+                                    <i class="fas fa-volume-up" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </article>
+                        
+                        <!-- Menor -->
+                        <article class="chord-card" data-chord="Cm" data-type="minor">
+                            <div class="chord-card__header">
+                                <h3 class="chord-card__name">Cm</h3>
+                                <span class="chord-card__fullname">Dó Menor</span>
+                            </div>
+                            <div class="chord-card__diagram">
+                                <svg class="chord-svg" viewBox="0 0 120 150" aria-label="Diagrama do acorde C menor">
+                                    <text x="8" y="35" font-size="10" fill="currentColor">3</text>
+                                    <rect x="15" y="20" width="90" height="5" fill="var(--color-primary)"/>
+                                    <line x1="15" y1="45" x2="105" y2="45" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="70" x2="105" y2="70" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="95" x2="105" y2="95" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="120" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="25" x2="15" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="33" y1="25" x2="33" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="51" y1="25" x2="51" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="69" y1="25" x2="69" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="87" y1="25" x2="87" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="105" y1="25" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <circle cx="69" cy="57" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="51" cy="57" r="8" fill="var(--color-primary)"/>
+                                </svg>
+                            </div>
+                            <div class="chord-card__info">
+                                <span class="chord-card__fingers">Pestana: casa 3</span>
+                                <button class="chord-card__play" aria-label="Ouvir acorde Cm">
+                                    <i class="fas fa-volume-up" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </article>
+                        
+                        <!-- Sétima -->
+                        <article class="chord-card" data-chord="C7" data-type="seventh">
+                            <div class="chord-card__header">
+                                <h3 class="chord-card__name">C7</h3>
+                                <span class="chord-card__fullname">Dó com Sétima</span>
+                            </div>
+                            <div class="chord-card__diagram">
+                                <svg class="chord-svg" viewBox="0 0 120 150" aria-label="Diagrama do acorde C7">
+                                    <rect x="15" y="20" width="90" height="5" fill="currentColor"/>
+                                    <line x1="15" y1="45" x2="105" y2="45" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="70" x2="105" y2="70" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="95" x2="105" y2="95" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="120" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="25" x2="15" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="33" y1="25" x2="33" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="51" y1="25" x2="51" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="69" y1="25" x2="69" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="87" y1="25" x2="87" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="105" y1="25" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <circle cx="33" cy="32" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="69" cy="57" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="51" cy="82" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="87" cy="82" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="105" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <text x="15" y="15" font-size="12" text-anchor="middle" fill="currentColor">✕</text>
+                                </svg>
+                            </div>
+                            <div class="chord-card__info">
+                                <span class="chord-card__fingers">Dedos: 1-2-3-4</span>
+                                <button class="chord-card__play" aria-label="Ouvir acorde C7">
+                                    <i class="fas fa-volume-up" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </article>
+                        
+                        <!-- Maior com Sétima Maior -->
+                        <article class="chord-card" data-chord="Cmaj7" data-type="maj7">
+                            <div class="chord-card__header">
+                                <h3 class="chord-card__name">Cmaj7</h3>
+                                <span class="chord-card__fullname">Dó Maior com 7ª Maior</span>
+                            </div>
+                            <div class="chord-card__diagram">
+                                <svg class="chord-svg" viewBox="0 0 120 150" aria-label="Diagrama do acorde Cmaj7">
+                                    <rect x="15" y="20" width="90" height="5" fill="currentColor"/>
+                                    <line x1="15" y1="45" x2="105" y2="45" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="70" x2="105" y2="70" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="95" x2="105" y2="95" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="120" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="25" x2="15" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="33" y1="25" x2="33" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="51" y1="25" x2="51" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="69" y1="25" x2="69" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="87" y1="25" x2="87" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="105" y1="25" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <circle cx="69" cy="57" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="51" cy="82" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="87" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="105" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <text x="15" y="15" font-size="12" text-anchor="middle" fill="currentColor">✕</text>
+                                    <text x="33" y="15" font-size="12" text-anchor="middle" fill="currentColor">✕</text>
+                                </svg>
+                            </div>
+                            <div class="chord-card__info">
+                                <span class="chord-card__fingers">Dedos: 2-3</span>
+                                <button class="chord-card__play" aria-label="Ouvir acorde Cmaj7">
+                                    <i class="fas fa-volume-up" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </article>
+                        
+                        <!-- Menor com Sétima -->
+                        <article class="chord-card" data-chord="Cm7" data-type="m7">
+                            <div class="chord-card__header">
+                                <h3 class="chord-card__name">Cm7</h3>
+                                <span class="chord-card__fullname">Dó Menor com 7ª</span>
+                            </div>
+                            <div class="chord-card__diagram">
+                                <svg class="chord-svg" viewBox="0 0 120 150" aria-label="Diagrama do acorde Cm7">
+                                    <text x="8" y="35" font-size="10" fill="currentColor">3</text>
+                                    <rect x="15" y="20" width="90" height="5" fill="var(--color-primary)"/>
+                                    <line x1="15" y1="45" x2="105" y2="45" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="70" x2="105" y2="70" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="95" x2="105" y2="95" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="120" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="25" x2="15" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="33" y1="25" x2="33" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="51" y1="25" x2="51" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="69" y1="25" x2="69" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="87" y1="25" x2="87" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="105" y1="25" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <circle cx="69" cy="57" r="8" fill="var(--color-primary)"/>
+                                </svg>
+                            </div>
+                            <div class="chord-card__info">
+                                <span class="chord-card__fingers">Pestana: casa 3</span>
+                                <button class="chord-card__play" aria-label="Ouvir acorde Cm7">
+                                    <i class="fas fa-volume-up" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </article>
+                        
+                        <!-- Sus4 -->
+                        <article class="chord-card" data-chord="Csus4" data-type="sus4">
+                            <div class="chord-card__header">
+                                <h3 class="chord-card__name">Csus4</h3>
+                                <span class="chord-card__fullname">Dó Suspensa 4ª</span>
+                            </div>
+                            <div class="chord-card__diagram">
+                                <svg class="chord-svg" viewBox="0 0 120 150" aria-label="Diagrama do acorde Csus4">
+                                    <rect x="15" y="20" width="90" height="5" fill="currentColor"/>
+                                    <line x1="15" y1="45" x2="105" y2="45" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="70" x2="105" y2="70" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="95" x2="105" y2="95" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="120" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="25" x2="15" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="33" y1="25" x2="33" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="51" y1="25" x2="51" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="69" y1="25" x2="69" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="87" y1="25" x2="87" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="105" y1="25" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <circle cx="33" cy="32" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="51" cy="82" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="69" cy="82" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="87" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="105" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                    <text x="15" y="15" font-size="12" text-anchor="middle" fill="currentColor">✕</text>
+                                </svg>
+                            </div>
+                            <div class="chord-card__info">
+                                <span class="chord-card__fingers">Dedos: 1-3-4</span>
+                                <button class="chord-card__play" aria-label="Ouvir acorde Csus4">
+                                    <i class="fas fa-volume-up" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </article>
+                        
+                        <!-- Diminuto -->
+                        <article class="chord-card" data-chord="Cdim" data-type="dim">
+                            <div class="chord-card__header">
+                                <h3 class="chord-card__name">Cdim</h3>
+                                <span class="chord-card__fullname">Dó Diminuto</span>
+                            </div>
+                            <div class="chord-card__diagram">
+                                <svg class="chord-svg" viewBox="0 0 120 150" aria-label="Diagrama do acorde Cdim">
+                                    <rect x="15" y="20" width="90" height="5" fill="currentColor"/>
+                                    <line x1="15" y1="45" x2="105" y2="45" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="70" x2="105" y2="70" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="95" x2="105" y2="95" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="120" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="25" x2="15" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="33" y1="25" x2="33" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="51" y1="25" x2="51" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="69" y1="25" x2="69" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="87" y1="25" x2="87" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="105" y1="25" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <circle cx="33" cy="32" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="69" cy="32" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="51" cy="57" r="8" fill="var(--color-primary)"/>
+                                    <text x="15" y="15" font-size="12" text-anchor="middle" fill="currentColor">✕</text>
+                                    <text x="87" y="15" font-size="12" text-anchor="middle" fill="currentColor">✕</text>
+                                    <text x="105" y="15" font-size="12" text-anchor="middle" fill="currentColor">✕</text>
+                                </svg>
+                            </div>
+                            <div class="chord-card__info">
+                                <span class="chord-card__fingers">Dedos: 1-2-3</span>
+                                <button class="chord-card__play" aria-label="Ouvir acorde Cdim">
+                                    <i class="fas fa-volume-up" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </article>
+                        
+                        <!-- Aumentado -->
+                        <article class="chord-card" data-chord="Caug" data-type="aug">
+                            <div class="chord-card__header">
+                                <h3 class="chord-card__name">C+</h3>
+                                <span class="chord-card__fullname">Dó Aumentado</span>
+                            </div>
+                            <div class="chord-card__diagram">
+                                <svg class="chord-svg" viewBox="0 0 120 150" aria-label="Diagrama do acorde C aumentado">
+                                    <rect x="15" y="20" width="90" height="5" fill="currentColor"/>
+                                    <line x1="15" y1="45" x2="105" y2="45" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="70" x2="105" y2="70" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="95" x2="105" y2="95" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="120" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="15" y1="25" x2="15" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="33" y1="25" x2="33" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="51" y1="25" x2="51" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="69" y1="25" x2="69" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="87" y1="25" x2="87" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <line x1="105" y1="25" x2="105" y2="120" stroke="currentColor" stroke-width="1"/>
+                                    <circle cx="33" cy="32" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="69" cy="32" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="51" cy="57" r="8" fill="var(--color-primary)"/>
+                                    <circle cx="87" cy="57" r="8" fill="var(--color-primary)"/>
+                                    <text x="15" y="15" font-size="12" text-anchor="middle" fill="currentColor">✕</text>
+                                    <text x="105" y="15" font-size="12" text-anchor="middle" fill="currentColor">✕</text>
+                                </svg>
+                            </div>
+                            <div class="chord-card__info">
+                                <span class="chord-card__fingers">Dedos: 1-2-3-4</span>
+                                <button class="chord-card__play" aria-label="Ouvir acorde Caug">
+                                    <i class="fas fa-volume-up" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <!-- Teclado Panel -->
+                <div id="teclado-panel" role="tabpanel" aria-labelledby="teclado-tab" class="chord-panel" hidden>
+                    <div class="piano-section">
+                        <h3 class="piano-section__title">Acordes de <span id="piano-note">C</span> no Teclado</h3>
+                        
+                        <div class="piano-chords-grid">
+                            <!-- C Maior -->
+                            <article class="piano-chord-card">
+                                <h4 class="piano-chord-card__name">C Maior</h4>
+                                <p class="piano-chord-card__notes">C - E - G</p>
+                                <div class="piano-keyboard" aria-label="Teclado mostrando acorde C maior">
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="C">C</div>
+                                    <div class="piano-key piano-key--black" data-note="C#"></div>
+                                    <div class="piano-key piano-key--white" data-note="D">D</div>
+                                    <div class="piano-key piano-key--black" data-note="D#"></div>
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="E">E</div>
+                                    <div class="piano-key piano-key--white" data-note="F">F</div>
+                                    <div class="piano-key piano-key--black" data-note="F#"></div>
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="G">G</div>
+                                    <div class="piano-key piano-key--black" data-note="G#"></div>
+                                    <div class="piano-key piano-key--white" data-note="A">A</div>
+                                    <div class="piano-key piano-key--black" data-note="A#"></div>
+                                    <div class="piano-key piano-key--white" data-note="B">B</div>
+                                </div>
+                                <p class="piano-chord-card__formula">Fórmula: 1 - 3 - 5</p>
+                            </article>
+                            
+                            <!-- C Menor -->
+                            <article class="piano-chord-card">
+                                <h4 class="piano-chord-card__name">C Menor</h4>
+                                <p class="piano-chord-card__notes">C - Eb - G</p>
+                                <div class="piano-keyboard" aria-label="Teclado mostrando acorde C menor">
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="C">C</div>
+                                    <div class="piano-key piano-key--black" data-note="C#"></div>
+                                    <div class="piano-key piano-key--white" data-note="D">D</div>
+                                    <div class="piano-key piano-key--black piano-key--active" data-note="D#">Eb</div>
+                                    <div class="piano-key piano-key--white" data-note="E">E</div>
+                                    <div class="piano-key piano-key--white" data-note="F">F</div>
+                                    <div class="piano-key piano-key--black" data-note="F#"></div>
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="G">G</div>
+                                    <div class="piano-key piano-key--black" data-note="G#"></div>
+                                    <div class="piano-key piano-key--white" data-note="A">A</div>
+                                    <div class="piano-key piano-key--black" data-note="A#"></div>
+                                    <div class="piano-key piano-key--white" data-note="B">B</div>
+                                </div>
+                                <p class="piano-chord-card__formula">Fórmula: 1 - b3 - 5</p>
+                            </article>
+                            
+                            <!-- C7 -->
+                            <article class="piano-chord-card">
+                                <h4 class="piano-chord-card__name">C7 (Dominante)</h4>
+                                <p class="piano-chord-card__notes">C - E - G - Bb</p>
+                                <div class="piano-keyboard" aria-label="Teclado mostrando acorde C7">
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="C">C</div>
+                                    <div class="piano-key piano-key--black" data-note="C#"></div>
+                                    <div class="piano-key piano-key--white" data-note="D">D</div>
+                                    <div class="piano-key piano-key--black" data-note="D#"></div>
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="E">E</div>
+                                    <div class="piano-key piano-key--white" data-note="F">F</div>
+                                    <div class="piano-key piano-key--black" data-note="F#"></div>
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="G">G</div>
+                                    <div class="piano-key piano-key--black" data-note="G#"></div>
+                                    <div class="piano-key piano-key--white" data-note="A">A</div>
+                                    <div class="piano-key piano-key--black piano-key--active" data-note="A#">Bb</div>
+                                    <div class="piano-key piano-key--white" data-note="B">B</div>
+                                </div>
+                                <p class="piano-chord-card__formula">Fórmula: 1 - 3 - 5 - b7</p>
+                            </article>
+                            
+                            <!-- Cmaj7 -->
+                            <article class="piano-chord-card">
+                                <h4 class="piano-chord-card__name">Cmaj7</h4>
+                                <p class="piano-chord-card__notes">C - E - G - B</p>
+                                <div class="piano-keyboard" aria-label="Teclado mostrando acorde Cmaj7">
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="C">C</div>
+                                    <div class="piano-key piano-key--black" data-note="C#"></div>
+                                    <div class="piano-key piano-key--white" data-note="D">D</div>
+                                    <div class="piano-key piano-key--black" data-note="D#"></div>
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="E">E</div>
+                                    <div class="piano-key piano-key--white" data-note="F">F</div>
+                                    <div class="piano-key piano-key--black" data-note="F#"></div>
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="G">G</div>
+                                    <div class="piano-key piano-key--black" data-note="G#"></div>
+                                    <div class="piano-key piano-key--white" data-note="A">A</div>
+                                    <div class="piano-key piano-key--black" data-note="A#"></div>
+                                    <div class="piano-key piano-key--white piano-key--active" data-note="B">B</div>
+                                </div>
+                                <p class="piano-chord-card__formula">Fórmula: 1 - 3 - 5 - 7</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Theory Section -->
+        <section class="chord-theory" aria-labelledby="chord-theory-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-header__badge">📚 Aprenda</span>
+                    <h2 id="chord-theory-title" class="section-header__title">
+                        Entendendo os <span class="text-gradient">Acordes</span>
+                    </h2>
+                </header>
+                
+                <div class="theory-grid">
+                    <article class="theory-card">
+                        <div class="theory-card__icon">🎵</div>
+                        <h3 class="theory-card__title">O que é um Acorde?</h3>
+                        <p class="theory-card__text">
+                            Um acorde é a combinação de três ou mais notas tocadas simultaneamente. 
+                            Os acordes são a base da harmonia musical e criam a sensação de 
+                            "completude" que ouvimos nas músicas.
+                        </p>
+                    </article>
+                    
+                    <article class="theory-card">
+                        <div class="theory-card__icon">📐</div>
+                        <h3 class="theory-card__title">Tríades</h3>
+                        <p class="theory-card__text">
+                            As tríades são acordes de 3 notas: fundamental, terça e quinta. 
+                            Podem ser maiores (alegres), menores (tristes), diminutas ou aumentadas, 
+                            dependendo dos intervalos entre as notas.
+                        </p>
+                    </article>
+                    
+                    <article class="theory-card">
+                        <div class="theory-card__icon">7️⃣</div>
+                        <h3 class="theory-card__title">Acordes com Sétima</h3>
+                        <p class="theory-card__text">
+                            Adicionando uma quarta nota (a sétima), criamos acordes mais ricos e 
+                            sofisticados. São muito usados no jazz, bossa nova e música popular 
+                            para criar tensão e resolução.
+                        </p>
+                    </article>
+                    
+                    <article class="theory-card">
+                        <div class="theory-card__icon">🔄</div>
+                        <h3 class="theory-card__title">Inversões</h3>
+                        <p class="theory-card__text">
+                            Inversões são diferentes formas de tocar o mesmo acorde, mudando qual 
+                            nota fica no baixo. Isso permite transições mais suaves entre acordes 
+                            e diferentes texturas sonoras.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">🎵</span>
+                        <span class="footer__logo-text">Musica<span class="footer__logo-accent">Viva</span></span>
+                    </a>
+                    <p class="footer__description">
+                        Seu portal completo para aprender música. Cifras, videoaulas, teoria musical e muito mais.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <nav class="footer__nav" aria-label="Links do rodapé">
+                    <h3 class="footer__nav-title">Navegação</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cifras.html">Cifras</a></li>
+                        <li><a href="videoaulas.html">Videoaulas</a></li>
+                        <li><a href="artigos.html">Artigos</a></li>
+                        <li><a href="dicionario.html">Dicionário</a></li>
+                        <li><a href="curiosidades.html">Curiosidades</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Tipos de acordes">
+                    <h3 class="footer__nav-title">Tipos de Acordes</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">Maiores</a></li>
+                        <li><a href="#">Menores</a></li>
+                        <li><a href="#">Com Sétima</a></li>
+                        <li><a href="#">Suspensos</a></li>
+                        <li><a href="#">Diminutos</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Suporte">
+                    <h3 class="footer__nav-title">Suporte</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 MusicaViva. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <button class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    
+    <script src="js/main.js" defer></script>
+    <script src="js/dicionario.js" defer></script>
+</body>
+</html>

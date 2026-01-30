@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cifras musicais completas para violão e teclado. Encontre acordes de milhares de músicas de todos os gêneros com transposição automática.">
+    <meta name="keywords" content="cifras, acordes, violão, teclado, músicas, letras, transposição">
+    
+    <meta property="og:title" content="Cifras Musicais - MusicaViva">
+    <meta property="og:description" content="Cifras completas para violão e teclado com transposição automática.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Cifras Musicais - MusicaViva</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <a href="index.html" class="header__logo" aria-label="MusicaViva - Página Inicial">
+                <span class="header__logo-icon">🎵</span>
+                <span class="header__logo-text">Musica<span class="header__logo-accent">Viva</span></span>
+            </a>
+            
+            <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="header__menu-icon"></span>
+            </button>
+            
+            <nav class="header__nav" id="main-nav" role="navigation" aria-label="Navegação principal">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="index.html" class="header__nav-link"><i class="fas fa-home" aria-hidden="true"></i><span>Início</span></a></li>
+                    <li class="header__nav-item"><a href="cifras.html" class="header__nav-link header__nav-link--active" aria-current="page"><i class="fas fa-music" aria-hidden="true"></i><span>Cifras</span></a></li>
+                    <li class="header__nav-item"><a href="videoaulas.html" class="header__nav-link"><i class="fas fa-video" aria-hidden="true"></i><span>Videoaulas</span></a></li>
+                    <li class="header__nav-item"><a href="artigos.html" class="header__nav-link"><i class="fas fa-newspaper" aria-hidden="true"></i><span>Artigos</span></a></li>
+                    <li class="header__nav-item"><a href="dicionario.html" class="header__nav-link"><i class="fas fa-book" aria-hidden="true"></i><span>Dicionário</span></a></li>
+                    <li class="header__nav-item"><a href="curiosidades.html" class="header__nav-link"><i class="fas fa-lightbulb" aria-hidden="true"></i><span>Curiosidades</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <button class="header__theme-toggle" aria-label="Alternar tema escuro/claro" title="Alternar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="header__search-toggle" aria-label="Abrir busca" title="Buscar">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="search-overlay" role="search" aria-hidden="true">
+            <div class="search-overlay__container">
+                <form class="search-overlay__form" action="#" method="GET">
+                    <input type="search" class="search-overlay__input" placeholder="Buscar cifras..." aria-label="Campo de busca" autocomplete="off">
+                    <button type="submit" class="search-overlay__submit" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </form>
+                <button class="search-overlay__close" aria-label="Fechar busca"><i class="fas fa-times" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main-content" role="main">
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--cifras">
+            <div class="page-hero__background">
+                <div class="page-hero__gradient"></div>
+            </div>
+            <div class="container">
+                <div class="page-hero__content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item"><a href="index.html">Início</a></li>
+                            <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Cifras</li>
+                        </ol>
+                    </nav>
+                    <h1 class="page-hero__title">
+                        <i class="fas fa-music" aria-hidden="true"></i>
+                        Cifras Musicais
+                    </h1>
+                    <p class="page-hero__description">
+                        Encontre cifras de suas músicas favoritas para violão e teclado. 
+                        Use o transpositor para ajustar ao seu tom preferido.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Search & Filters -->
+        <section class="cifras-search" aria-label="Busca e filtros de cifras">
+            <div class="container">
+                <div class="cifras-search__wrapper">
+                    <form class="cifras-search__form" id="cifras-search-form">
+                        <div class="cifras-search__input-group">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                            <input 
+                                type="search" 
+                                id="cifra-search-input"
+                                class="cifras-search__input" 
+                                placeholder="Buscar por música ou artista..."
+                                aria-label="Buscar cifras"
+                            >
+                            <button type="button" class="cifras-search__clear" aria-label="Limpar busca" hidden>
+                                <i class="fas fa-times" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="cifras-filters">
+                        <div class="cifras-filters__group">
+                            <label for="filter-genre" class="cifras-filters__label">Gênero:</label>
+                            <select id="filter-genre" class="cifras-filters__select">
+                                <option value="">Todos</option>
+                                <option value="rock">Rock</option>
+                                <option value="pop">Pop</option>
+                                <option value="mpb">MPB</option>
+                                <option value="sertanejo">Sertanejo</option>
+                                <option value="gospel">Gospel</option>
+                                <option value="internacional">Internacional</option>
+                            </select>
+                        </div>
+                        
+                        <div class="cifras-filters__group">
+                            <label for="filter-difficulty" class="cifras-filters__label">Dificuldade:</label>
+                            <select id="filter-difficulty" class="cifras-filters__select">
+                                <option value="">Todas</option>
+                                <option value="easy">Fácil</option>
+                                <option value="medium">Médio</option>
+                                <option value="hard">Difícil</option>
+                            </select>
+                        </div>
+                        
+                        <div class="cifras-filters__group">
+                            <label for="filter-sort" class="cifras-filters__label">Ordenar:</label>
+                            <select id="filter-sort" class="cifras-filters__select">
+                                <option value="popular">Mais Populares</option>
+                                <option value="recent">Mais Recentes</option>
+                                <option value="az">A-Z</option>
+                                <option value="za">Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cifras-tags" role="list" aria-label="Filtros rápidos">
+                    <button class="cifras-tag cifras-tag--active" data-filter="all">Todas</button>
+                    <button class="cifras-tag" data-filter="rock">🎸 Rock</button>
+                    <button class="cifras-tag" data-filter="pop">🎤 Pop</button>
+                    <button class="cifras-tag" data-filter="mpb">🇧🇷 MPB</button>
+                    <button class="cifras-tag" data-filter="sertanejo">🤠 Sertanejo</button>
+                    <button class="cifras-tag" data-filter="gospel">✝️ Gospel</button>
+                    <button class="cifras-tag" data-filter="internacional">🌎 Internacional</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cifras List -->
+        <section class="cifras-list" aria-label="Lista de cifras">
+            <div class="container">
+                <div class="cifras-results">
+                    <p class="cifras-results__count">
+                        Mostrando <strong id="results-count">12</strong> cifras
+                    </p>
+                </div>
+                
+                <div class="cifras-grid" id="cifras-grid">
+                    <!-- Cifra Card 1 -->
+                    <article class="cifra-item" data-genre="mpb" data-difficulty="easy" data-id="evidencias">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--mpb">MPB</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Evidências</h2>
+                            <p class="cifra-item__artist">Chitãozinho & Xororó</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--easy">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Fácil
+                                </span>
+                                <span class="cifra-item__key">Tom: C</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 45.2k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="evidencias" aria-label="Ver cifra de Evidências">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                    
+                    <!-- Cifra Card 2 -->
+                    <article class="cifra-item" data-genre="rock" data-difficulty="medium" data-id="pais-e-filhos">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--rock">Rock</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Pais e Filhos</h2>
+                            <p class="cifra-item__artist">Legião Urbana</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--medium">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Médio
+                                </span>
+                                <span class="cifra-item__key">Tom: G</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 38.7k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="pais-e-filhos" aria-label="Ver cifra de Pais e Filhos">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                    
+                    <!-- Cifra Card 3 -->
+                    <article class="cifra-item" data-genre="pop" data-difficulty="easy" data-id="perfect">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--pop">Pop</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Perfect</h2>
+                            <p class="cifra-item__artist">Ed Sheeran</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--easy">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Fácil
+                                </span>
+                                <span class="cifra-item__key">Tom: G</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 52.3k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="perfect" aria-label="Ver cifra de Perfect">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                    
+                    <!-- Cifra Card 4 -->
+                    <article class="cifra-item" data-genre="gospel" data-difficulty="easy" data-id="nada-alem">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--gospel">Gospel</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Nada Além do Sangue</h2>
+                            <p class="cifra-item__artist">Fernandinho</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--easy">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Fácil
+                                </span>
+                                <span class="cifra-item__key">Tom: E</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 41.8k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="nada-alem" aria-label="Ver cifra de Nada Além do Sangue">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                    
+                    <!-- Cifra Card 5 -->
+                    <article class="cifra-item" data-genre="internacional" data-difficulty="medium" data-id="shallow">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--internacional">Internacional</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Shallow</h2>
+                            <p class="cifra-item__artist">Lady Gaga & Bradley Cooper</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--medium">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Médio
+                                </span>
+                                <span class="cifra-item__key">Tom: G</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 33.1k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="shallow" aria-label="Ver cifra de Shallow">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                    
+                    <!-- Cifra Card 6 -->
+                    <article class="cifra-item" data-genre="sertanejo" data-difficulty="easy" data-id="milu">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--sertanejo">Sertanejo</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Milu</h2>
+                            <p class="cifra-item__artist">Gusttavo Lima</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--easy">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Fácil
+                                </span>
+                                <span class="cifra-item__key">Tom: D</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 28.4k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="milu" aria-label="Ver cifra de Milu">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                    
+                    <!-- Cifra Card 7 -->
+                    <article class="cifra-item" data-genre="rock" data-difficulty="hard" data-id="stairway">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--rock">Rock</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Stairway to Heaven</h2>
+                            <p class="cifra-item__artist">Led Zeppelin</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--hard">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Difícil
+                                </span>
+                                <span class="cifra-item__key">Tom: Am</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 25.6k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="stairway" aria-label="Ver cifra de Stairway to Heaven">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                    
+                    <!-- Cifra Card 8 -->
+                    <article class="cifra-item" data-genre="mpb" data-difficulty="medium" data-id="aquarela">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--mpb">MPB</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Aquarela</h2>
+                            <p class="cifra-item__artist">Toquinho</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--medium">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Médio
+                                </span>
+                                <span class="cifra-item__key">Tom: G</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 31.2k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="aquarela" aria-label="Ver cifra de Aquarela">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                    
+                    <!-- Cifra Card 9 -->
+                    <article class="cifra-item" data-genre="gospel" data-difficulty="medium" data-id="lugar-secreto">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--gospel">Gospel</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Lugar Secreto</h2>
+                            <p class="cifra-item__artist">Gabriela Rocha</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--medium">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Médio
+                                </span>
+                                <span class="cifra-item__key">Tom: B</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 36.9k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="lugar-secreto" aria-label="Ver cifra de Lugar Secreto">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                    
+                    <!-- Cifra Card 10 -->
+                    <article class="cifra-item" data-genre="pop" data-difficulty="easy" data-id="thinking-out-loud">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--pop">Pop</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Thinking Out Loud</h2>
+                            <p class="cifra-item__artist">Ed Sheeran</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--easy">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Fácil
+                                </span>
+                                <span class="cifra-item__key">Tom: D</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 42.1k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="thinking-out-loud" aria-label="Ver cifra de Thinking Out Loud">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                    
+                    <!-- Cifra Card 11 -->
+                    <article class="cifra-item" data-genre="rock" data-difficulty="easy" data-id="tempo-perdido">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--rock">Rock</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Tempo Perdido</h2>
+                            <p class="cifra-item__artist">Legião Urbana</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--easy">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Fácil
+                                </span>
+                                <span class="cifra-item__key">Tom: D</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 29.8k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="tempo-perdido" aria-label="Ver cifra de Tempo Perdido">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                    
+                    <!-- Cifra Card 12 -->
+                    <article class="cifra-item" data-genre="internacional" data-difficulty="medium" data-id="hotel-california">
+                        <div class="cifra-item__header">
+                            <span class="cifra-item__genre cifra-item__genre--internacional">Internacional</span>
+                            <button class="cifra-item__favorite" aria-label="Adicionar aos favoritos">
+                                <i class="far fa-heart" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="cifra-item__content">
+                            <h2 class="cifra-item__title">Hotel California</h2>
+                            <p class="cifra-item__artist">Eagles</p>
+                            <div class="cifra-item__meta">
+                                <span class="cifra-item__difficulty cifra-item__difficulty--medium">
+                                    <i class="fas fa-signal" aria-hidden="true"></i> Médio
+                                </span>
+                                <span class="cifra-item__key">Tom: Bm</span>
+                                <span class="cifra-item__views">
+                                    <i class="fas fa-eye" aria-hidden="true"></i> 47.5k
+                                </span>
+                            </div>
+                        </div>
+                        <button class="cifra-item__view" data-cifra="hotel-california" aria-label="Ver cifra de Hotel California">
+                            Ver Cifra <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                </div>
+                
+                <!-- Pagination -->
+                <nav class="pagination" aria-label="Paginação de cifras">
+                    <button class="pagination__btn pagination__btn--prev" disabled aria-label="Página anterior">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <div class="pagination__numbers">
+                        <button class="pagination__number pagination__number--active" aria-current="page">1</button>
+                        <button class="pagination__number">2</button>
+                        <button class="pagination__number">3</button>
+                        <span class="pagination__ellipsis">...</span>
+                        <button class="pagination__number">12</button>
+                    </div>
+                    <button class="pagination__btn pagination__btn--next" aria-label="Próxima página">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </nav>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Cifra Modal -->
+    <div class="cifra-modal" id="cifra-modal" role="dialog" aria-modal="true" aria-labelledby="cifra-modal-title" hidden>
+        <div class="cifra-modal__overlay"></div>
+        <div class="cifra-modal__container">
+            <div class="cifra-modal__header">
+                <div class="cifra-modal__info">
+                    <h2 id="cifra-modal-title" class="cifra-modal__title">Evidências</h2>
+                    <p class="cifra-modal__artist">Chitãozinho & Xororó</p>
+                </div>
+                <button class="cifra-modal__close" aria-label="Fechar cifra">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            
+            <div class="cifra-modal__toolbar">
+                <div class="cifra-modal__transpose">
+                    <span class="cifra-modal__label">Tom:</span>
+                    <button class="cifra-modal__transpose-btn" data-action="down" aria-label="Diminuir tom">
+                        <i class="fas fa-minus" aria-hidden="true"></i>
+                    </button>
+                    <span class="cifra-modal__key" id="current-key">C</span>
+                    <button class="cifra-modal__transpose-btn" data-action="up" aria-label="Aumentar tom">
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="cifra-modal__font-size">
+                    <span class="cifra-modal__label">Fonte:</span>
+                    <button class="cifra-modal__font-btn" data-action="decrease" aria-label="Diminuir fonte">
+                        A-
+                    </button>
+                    <button class="cifra-modal__font-btn" data-action="increase" aria-label="Aumentar fonte">
+                        A+
+                    </button>
+                </div>
+                
+                <div class="cifra-modal__actions">
+                    <button class="cifra-modal__action" aria-label="Imprimir cifra">
+                        <i class="fas fa-print" aria-hidden="true"></i>
+                    </button>
+                    <button class="cifra-modal__action" aria-label="Adicionar aos favoritos">
+                        <i class="far fa-heart" aria-hidden="true"></i>
+                    </button>
+                    <button class="cifra-modal__action cifra-modal__action--scroll" aria-label="Auto-scroll">
+                        <i class="fas fa-scroll" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="cifra-modal__content">
+                <pre class="cifra-modal__cifra" id="cifra-content">
+<span class="chord">C</span>                    <span class="chord">Am</span>
+Quando eu digo que deixei de te amar
+<span class="chord">F</span>                    <span class="chord">G</span>
+É porque eu te amo
+<span class="chord">C</span>                    <span class="chord">Am</span>
+Quando eu digo que não quero mais você
+<span class="chord">F</span>                    <span class="chord">G</span>
+É porque eu te quero
+
+<span class="chord">F</span>                    <span class="chord">G</span>
+Eu tenho medo de te dar meu coração
+<span class="chord">C</span>                    <span class="chord">Am</span>
+E confessar que eu estou em tuas mãos
+<span class="chord">F</span>                    <span class="chord">G</span>
+Mas não posso imaginar o que vai ser de mim
+<span class="chord">C</span>                    <span class="chord">G</span>
+Se eu não te ver
+
+<span class="chord">C</span>              <span class="chord">G</span>
+Evidências
+<span class="chord">Am</span>                    <span class="chord">F</span>
+Não adianta nem tentar me esquecer
+<span class="chord">C</span>                    <span class="chord">G</span>
+Durante muito tempo em sua vida
+<span class="chord">Am</span>                    <span class="chord">F</span>
+Eu vou viver
+
+<span class="chord">C</span>              <span class="chord">G</span>
+Evidências
+<span class="chord">Am</span>                    <span class="chord">F</span>
+Toda vez que eu passava em sua vida
+<span class="chord">C</span>                    <span class="chord">G</span>
+Deixei um pouco de mim
+<span class="chord">Am</span>                    <span class="chord">F</span>    <span class="chord">G</span>
+E levei um pouco de você</pre>
+            </div>
+            
+            <div class="cifra-modal__footer">
+                <div class="cifra-modal__chords-used">
+                    <span class="cifra-modal__label">Acordes usados:</span>
+                    <div class="cifra-modal__chord-list">
+                        <button class="cifra-modal__chord" data-chord="C">C</button>
+                        <button class="cifra-modal__chord" data-chord="Am">Am</button>
+                        <button class="cifra-modal__chord" data-chord="F">F</button>
+                        <button class="cifra-modal__chord" data-chord="G">G</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chord Diagram Popup -->
+    <div class="chord-popup" id="chord-popup" role="tooltip" hidden>
+        <div class="chord-popup__header">
+            <span class="chord-popup__name">C</span>
+            <span class="chord-popup__fullname">Dó Maior</span>
+        </div>
+        <div class="chord-popup__diagram">
+            <svg class="chord-diagram" viewBox="0 0 100 120" aria-label="Diagrama do acorde">
+                <!-- Frets -->
+                <line x1="10" y1="20" x2="90" y2="20" stroke="currentColor" stroke-width="3"/>
+                <line x1="10" y1="40" x2="90" y2="40" stroke="currentColor" stroke-width="1"/>
+                <line x1="10" y1="60" x2="90" y2="60" stroke="currentColor" stroke-width="1"/>
+                <line x1="10" y1="80" x2="90" y2="80" stroke="currentColor" stroke-width="1"/>
+                <line x1="10" y1="100" x2="90" y2="100" stroke="currentColor" stroke-width="1"/>
+                <!-- Strings -->
+                <line x1="10" y1="20" x2="10" y2="100" stroke="currentColor" stroke-width="1"/>
+                <line x1="26" y1="20" x2="26" y2="100" stroke="currentColor" stroke-width="1"/>
+                <line x1="42" y1="20" x2="42" y2="100" stroke="currentColor" stroke-width="1"/>
+                <line x1="58" y1="20" x2="58" y2="100" stroke="currentColor" stroke-width="1"/>
+                <line x1="74" y1="20" x2="74" y2="100" stroke="currentColor" stroke-width="1"/>
+                <line x1="90" y1="20" x2="90" y2="100" stroke="currentColor" stroke-width="1"/>
+                <!-- Finger positions for C chord -->
+                <circle cx="26" cy="30" r="6" fill="var(--color-primary)"/>
+                <circle cx="58" cy="50" r="6" fill="var(--color-primary)"/>
+                <circle cx="42" cy="70" r="6" fill="var(--color-primary)"/>
+                <!-- Open strings -->
+                <circle cx="74" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="1"/>
+                <circle cx="90" cy="10" r="4" fill="none" stroke="currentColor" stroke-width="1"/>
+                <!-- Muted string -->
+                <text x="10" y="14" font-size="10" text-anchor="middle" fill="currentColor">X</text>
+            </svg>
+        </div>
+        <div class="chord-popup__fingers">
+            <span>Dedos: 1-2-3</span>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">🎵</span>
+                        <span class="footer__logo-text">Musica<span class="footer__logo-accent">Viva</span></span>
+                    </a>
+                    <p class="footer__description">
+                        Seu portal completo para aprender música. Cifras, videoaulas, teoria musical e muito mais.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <nav class="footer__nav" aria-label="Links do rodapé">
+                    <h3 class="footer__nav-title">Navegação</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cifras.html">Cifras</a></li>
+                        <li><a href="videoaulas.html">Videoaulas</a></li>
+                        <li><a href="artigos.html">Artigos</a></li>
+                        <li><a href="dicionario.html">Dicionário</a></li>
+                        <li><a href="curiosidades.html">Curiosidades</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Gêneros musicais">
+                    <h3 class="footer__nav-title">Gêneros</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#rock">Rock</a></li>
+                        <li><a href="#pop">Pop</a></li>
+                        <li><a href="#mpb">MPB</a></li>
+                        <li><a href="#sertanejo">Sertanejo</a></li>
+                        <li><a href="#gospel">Gospel</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Suporte">
+                    <h3 class="footer__nav-title">Suporte</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 MusicaViva. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <button class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    
+    <script src="js/main.js" defer></script>
+    <script src="js/cifras.js" defer></script>
+</body>
+</html>

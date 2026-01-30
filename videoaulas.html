@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Videoaulas de música gratuitas: violão, teclado, teoria musical, técnicas de canto e muito mais. Aprenda música de forma prática e divertida.">
+    <meta name="keywords" content="videoaulas, música, violão, teclado, teoria musical, aulas de música, curso de música">
+    
+    <meta property="og:title" content="Videoaulas de Música - MusicaViva">
+    <meta property="og:description" content="Aprenda música com videoaulas gratuitas de violão, teclado, teoria musical e mais.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Videoaulas de Música - MusicaViva</title>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <a href="index.html" class="header__logo" aria-label="MusicaViva - Página Inicial">
+                <span class="header__logo-icon">🎵</span>
+                <span class="header__logo-text">Musica<span class="header__logo-accent">Viva</span></span>
+            </a>
+            
+            <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                <span class="header__menu-icon"></span>
+            </button>
+            
+            <nav class="header__nav" id="main-nav" role="navigation" aria-label="Navegação principal">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="index.html" class="header__nav-link"><i class="fas fa-home" aria-hidden="true"></i><span>Início</span></a></li>
+                    <li class="header__nav-item"><a href="cifras.html" class="header__nav-link"><i class="fas fa-music" aria-hidden="true"></i><span>Cifras</span></a></li>
+                    <li class="header__nav-item"><a href="videoaulas.html" class="header__nav-link header__nav-link--active" aria-current="page"><i class="fas fa-video" aria-hidden="true"></i><span>Videoaulas</span></a></li>
+                    <li class="header__nav-item"><a href="artigos.html" class="header__nav-link"><i class="fas fa-newspaper" aria-hidden="true"></i><span>Artigos</span></a></li>
+                    <li class="header__nav-item"><a href="dicionario.html" class="header__nav-link"><i class="fas fa-book" aria-hidden="true"></i><span>Dicionário</span></a></li>
+                    <li class="header__nav-item"><a href="curiosidades.html" class="header__nav-link"><i class="fas fa-lightbulb" aria-hidden="true"></i><span>Curiosidades</span></a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <button class="header__theme-toggle" aria-label="Alternar tema escuro/claro" title="Alternar tema">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="header__search-toggle" aria-label="Abrir busca" title="Buscar">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="search-overlay" role="search" aria-hidden="true">
+            <div class="search-overlay__container">
+                <form class="search-overlay__form" action="#" method="GET">
+                    <input type="search" class="search-overlay__input" placeholder="Buscar videoaulas..." aria-label="Campo de busca" autocomplete="off">
+                    <button type="submit" class="search-overlay__submit" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></button>
+                </form>
+                <button class="search-overlay__close" aria-label="Fechar busca"><i class="fas fa-times" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main-content" role="main">
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--videoaulas">
+            <div class="page-hero__background">
+                <div class="page-hero__gradient"></div>
+            </div>
+            <div class="container">
+                <div class="page-hero__content">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item"><a href="index.html">Início</a></li>
+                            <li class="breadcrumb__item breadcrumb__item--active" aria-current="page">Videoaulas</li>
+                        </ol>
+                    </nav>
+                    <h1 class="page-hero__title">
+                        <i class="fas fa-video" aria-hidden="true"></i>
+                        Videoaulas de Música
+                    </h1>
+                    <p class="page-hero__description">
+                        Aprenda música de forma prática com nossas videoaulas. Do básico ao avançado, 
+                        temos conteúdo para todos os níveis e instrumentos.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Categories Navigation -->
+        <section class="video-categories" aria-label="Categorias de videoaulas">
+            <div class="container">
+                <div class="video-categories__grid">
+                    <a href="#violao" class="video-category">
+                        <div class="video-category__icon">🎸</div>
+                        <h3 class="video-category__title">Violão</h3>
+                        <span class="video-category__count">32 aulas</span>
+                    </a>
+                    <a href="#teclado" class="video-category">
+                        <div class="video-category__icon">🎹</div>
+                        <h3 class="video-category__title">Teclado</h3>
+                        <span class="video-category__count">28 aulas</span>
+                    </a>
+                    <a href="#teoria" class="video-category">
+                        <div class="video-category__icon">📖</div>
+                        <h3 class="video-category__title">Teoria Musical</h3>
+                        <span class="video-category__count">24 aulas</span>
+                    </a>
+                    <a href="#canto" class="video-category">
+                        <div class="video-category__icon">🎤</div>
+                        <h3 class="video-category__title">Canto</h3>
+                        <span class="video-category__count">18 aulas</span>
+                    </a>
+                    <a href="#bateria" class="video-category">
+                        <div class="video-category__icon">🥁</div>
+                        <h3 class="video-category__title">Bateria</h3>
+                        <span class="video-category__count">15 aulas</span>
+                    </a>
+                    <a href="#producao" class="video-category">
+                        <div class="video-category__icon">🎧</div>
+                        <h3 class="video-category__title">Produção</h3>
+                        <span class="video-category__count">12 aulas</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Video -->
+        <section class="featured-video" aria-labelledby="featured-video-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-header__badge">⭐ Destaque</span>
+                    <h2 id="featured-video-title" class="section-header__title">
+                        Aula em <span class="text-gradient">destaque</span>
+                    </h2>
+                </header>
+                
+                <article class="featured-video__card">
+                    <div class="featured-video__player">
+                        <div class="featured-video__thumbnail">
+                            <div class="featured-video__placeholder">
+                                <i class="fas fa-guitar" aria-hidden="true"></i>
+                            </div>
+                            <button class="featured-video__play" aria-label="Assistir vídeo">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                            <span class="featured-video__duration">45:20</span>
+                        </div>
+                    </div>
+                    <div class="featured-video__content">
+                        <div class="featured-video__tags">
+                            <span class="featured-video__tag">Violão</span>
+                            <span class="featured-video__tag featured-video__tag--level">Iniciante</span>
+                            <span class="featured-video__tag featured-video__tag--new">Novo</span>
+                        </div>
+                        <h3 class="featured-video__title">Curso Completo de Violão para Iniciantes - Aula 1</h3>
+                        <p class="featured-video__description">
+                            Comece sua jornada musical do zero! Nesta primeira aula, você vai aprender sobre as partes do violão, 
+                            postura correta, como segurar o instrumento e os primeiros acordes básicos (D, A, E). 
+                            Incluímos exercícios práticos para você treinar em casa.
+                        </p>
+                        <ul class="featured-video__topics">
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Partes do violão e nomenclatura</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Postura correta para tocar</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Primeiros 3 acordes (D, A, E)</li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i> Exercícios de troca de acordes</li>
+                        </ul>
+                        <div class="featured-video__meta">
+                            <span><i class="fas fa-eye" aria-hidden="true"></i> 125.4k views</span>
+                            <span><i class="fas fa-calendar" aria-hidden="true"></i> 15 Jan 2026</span>
+                            <span><i class="fas fa-star" aria-hidden="true"></i> 4.9 (2.3k avaliações)</span>
+                        </div>
+                        <a href="#" class="btn btn--primary featured-video__cta">
+                            <i class="fas fa-play" aria-hidden="true"></i> Assistir Agora
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Violão Section -->
+        <section class="video-section" id="violao" aria-labelledby="violao-title">
+            <div class="container">
+                <header class="section-header section-header--left">
+                    <div class="section-header__icon">🎸</div>
+                    <div>
+                        <h2 id="violao-title" class="section-header__title">Aulas de Violão</h2>
+                        <p class="section-header__description">Do iniciante ao avançado, aprenda técnicas e músicas</p>
+                    </div>
+                    <a href="#" class="section-header__link">Ver todas <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </header>
+                
+                <div class="video-grid">
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">
+                                <i class="fas fa-hand-paper" aria-hidden="true"></i>
+                            </div>
+                            <span class="video-card-alt__duration">15:32</span>
+                            <span class="video-card-alt__level video-card-alt__level--iniciante">Iniciante</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Como fazer Pestana Perfeita</h3>
+                            <p class="video-card-alt__description">Técnica correta para pestana sem dor e com som limpo</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 45.2k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.8</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">
+                                <i class="fas fa-arrows-alt-h" aria-hidden="true"></i>
+                            </div>
+                            <span class="video-card-alt__duration">22:15</span>
+                            <span class="video-card-alt__level video-card-alt__level--intermediario">Intermediário</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Dedilhados Essenciais</h3>
+                            <p class="video-card-alt__description">10 padrões de dedilhado mais usados na música popular</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 32.1k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">
+                                <i class="fas fa-music" aria-hidden="true"></i>
+                            </div>
+                            <span class="video-card-alt__duration">18:47</span>
+                            <span class="video-card-alt__level video-card-alt__level--iniciante">Iniciante</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Ritmos Brasileiros: Bossa Nova</h3>
+                            <p class="video-card-alt__description">Aprenda o ritmo característico da Bossa Nova</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 28.9k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.7</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">
+                                <i class="fas fa-hand-rock" aria-hidden="true"></i>
+                            </div>
+                            <span class="video-card-alt__duration">25:10</span>
+                            <span class="video-card-alt__level video-card-alt__level--avancado">Avançado</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Técnicas de Fingerstyle</h3>
+                            <p class="video-card-alt__description">Tapping, harmonics e técnicas avançadas</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 19.5k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Teclado Section -->
+        <section class="video-section video-section--alt" id="teclado" aria-labelledby="teclado-title">
+            <div class="container">
+                <header class="section-header section-header--left">
+                    <div class="section-header__icon">🎹</div>
+                    <div>
+                        <h2 id="teclado-title" class="section-header__title">Aulas de Teclado</h2>
+                        <p class="section-header__description">Piano e teclado para todos os níveis</p>
+                    </div>
+                    <a href="#" class="section-header__link">Ver todas <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </header>
+                
+                <div class="video-grid">
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">🎹</div>
+                            <span class="video-card-alt__duration">20:45</span>
+                            <span class="video-card-alt__level video-card-alt__level--iniciante">Iniciante</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Posição das Mãos e Primeiras Notas</h3>
+                            <p class="video-card-alt__description">Fundamentos essenciais para começar no teclado</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 38.4k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.8</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">🎼</div>
+                            <span class="video-card-alt__duration">18:30</span>
+                            <span class="video-card-alt__level video-card-alt__level--intermediario">Intermediário</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Inversões de Acordes</h3>
+                            <p class="video-card-alt__description">Como usar inversões para transições suaves</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 24.7k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">🎵</div>
+                            <span class="video-card-alt__duration">28:15</span>
+                            <span class="video-card-alt__level video-card-alt__level--intermediario">Intermediário</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Acompanhamento de Músicas</h3>
+                            <p class="video-card-alt__description">Padrões de acompanhamento para diferentes estilos</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 21.3k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.7</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">🎶</div>
+                            <span class="video-card-alt__duration">35:40</span>
+                            <span class="video-card-alt__level video-card-alt__level--avancado">Avançado</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Improvisação em Jazz</h3>
+                            <p class="video-card-alt__description">Escalas e técnicas para improvisar no jazz</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 15.8k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Teoria Musical Section -->
+        <section class="video-section" id="teoria" aria-labelledby="teoria-title">
+            <div class="container">
+                <header class="section-header section-header--left">
+                    <div class="section-header__icon">📖</div>
+                    <div>
+                        <h2 id="teoria-title" class="section-header__title">Teoria Musical</h2>
+                        <p class="section-header__description">Fundamentos que todo músico precisa saber</p>
+                    </div>
+                    <a href="#" class="section-header__link">Ver todas <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </header>
+                
+                <div class="video-grid">
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">
+                                <i class="fas fa-music" aria-hidden="true"></i>
+                            </div>
+                            <span class="video-card-alt__duration">25:00</span>
+                            <span class="video-card-alt__level video-card-alt__level--iniciante">Iniciante</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Notas Musicais e Claves</h3>
+                            <p class="video-card-alt__description">Entenda o sistema de notação musical</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 52.1k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">
+                                <i class="fas fa-layer-group" aria-hidden="true"></i>
+                            </div>
+                            <span class="video-card-alt__duration">30:15</span>
+                            <span class="video-card-alt__level video-card-alt__level--intermediario">Intermediário</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Campo Harmônico Maior</h3>
+                            <p class="video-card-alt__description">Como os acordes se relacionam na escala maior</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 41.3k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.8</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">
+                                <i class="fas fa-ruler-vertical" aria-hidden="true"></i>
+                            </div>
+                            <span class="video-card-alt__duration">22:40</span>
+                            <span class="video-card-alt__level video-card-alt__level--iniciante">Iniciante</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Intervalos Musicais</h3>
+                            <p class="video-card-alt__description">Distância entre notas e sua classificação</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 35.7k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.7</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">
+                                <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                            </div>
+                            <span class="video-card-alt__duration">40:20</span>
+                            <span class="video-card-alt__level video-card-alt__level--avancado">Avançado</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Harmonia Funcional</h3>
+                            <p class="video-card-alt__description">Funções harmônicas e progressões de acordes</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 22.9k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Canto Section -->
+        <section class="video-section video-section--alt" id="canto" aria-labelledby="canto-title">
+            <div class="container">
+                <header class="section-header section-header--left">
+                    <div class="section-header__icon">🎤</div>
+                    <div>
+                        <h2 id="canto-title" class="section-header__title">Aulas de Canto</h2>
+                        <p class="section-header__description">Técnica vocal e interpretação</p>
+                    </div>
+                    <a href="#" class="section-header__link">Ver todas <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </header>
+                
+                <div class="video-grid">
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">🎤</div>
+                            <span class="video-card-alt__duration">18:25</span>
+                            <span class="video-card-alt__level video-card-alt__level--iniciante">Iniciante</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Aquecimento Vocal</h3>
+                            <p class="video-card-alt__description">Exercícios essenciais antes de cantar</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 67.8k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">🫁</div>
+                            <span class="video-card-alt__duration">22:10</span>
+                            <span class="video-card-alt__level video-card-alt__level--iniciante">Iniciante</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Respiração Diafragmática</h3>
+                            <p class="video-card-alt__description">A base da técnica vocal correta</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 54.2k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.8</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">🎵</div>
+                            <span class="video-card-alt__duration">28:35</span>
+                            <span class="video-card-alt__level video-card-alt__level--intermediario">Intermediário</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Extensão Vocal</h3>
+                            <p class="video-card-alt__description">Como ampliar seu alcance vocal com segurança</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 38.9k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.7</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="video-card-alt">
+                        <div class="video-card-alt__thumbnail">
+                            <div class="video-card-alt__placeholder">✨</div>
+                            <span class="video-card-alt__duration">32:50</span>
+                            <span class="video-card-alt__level video-card-alt__level--avancado">Avançado</span>
+                            <button class="video-card-alt__play" aria-label="Assistir">
+                                <i class="fas fa-play" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="video-card-alt__content">
+                            <h3 class="video-card-alt__title">Técnicas de Belting</h3>
+                            <p class="video-card-alt__description">Notas altas com potência sem prejudicar a voz</p>
+                            <div class="video-card-alt__meta">
+                                <span><i class="fas fa-eye" aria-hidden="true"></i> 25.4k</span>
+                                <span><i class="fas fa-star" aria-hidden="true"></i> 4.9</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Learning Path -->
+        <section class="learning-path" aria-labelledby="learning-path-title">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-header__badge">🎯 Trilha de Aprendizado</span>
+                    <h2 id="learning-path-title" class="section-header__title">
+                        Por onde <span class="text-gradient">começar?</span>
+                    </h2>
+                    <p class="section-header__description">
+                        Siga nossa trilha recomendada para evoluir de forma estruturada.
+                    </p>
+                </header>
+                
+                <div class="learning-path__timeline">
+                    <div class="learning-path__step learning-path__step--active">
+                        <div class="learning-path__step-marker">1</div>
+                        <div class="learning-path__step-content">
+                            <h3 class="learning-path__step-title">Fundamentos</h3>
+                            <p class="learning-path__step-description">
+                                Aprenda notas, postura e os primeiros acordes básicos.
+                            </p>
+                            <span class="learning-path__step-duration">
+                                <i class="fas fa-clock" aria-hidden="true"></i> 2-4 semanas
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="learning-path__step">
+                        <div class="learning-path__step-marker">2</div>
+                        <div class="learning-path__step-content">
+                            <h3 class="learning-path__step-title">Teoria Básica</h3>
+                            <p class="learning-path__step-description">
+                                Entenda escalas, intervalos e formação de acordes.
+                            </p>
+                            <span class="learning-path__step-duration">
+                                <i class="fas fa-clock" aria-hidden="true"></i> 3-5 semanas
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="learning-path__step">
+                        <div class="learning-path__step-marker">3</div>
+                        <div class="learning-path__step-content">
+                            <h3 class="learning-path__step-title">Ritmos e Técnicas</h3>
+                            <p class="learning-path__step-description">
+                                Desenvolva coordenação e aprenda padrões rítmicos.
+                            </p>
+                            <span class="learning-path__step-duration">
+                                <i class="fas fa-clock" aria-hidden="true"></i> 4-6 semanas
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="learning-path__step">
+                        <div class="learning-path__step-marker">4</div>
+                        <div class="learning-path__step-content">
+                            <h3 class="learning-path__step-title">Repertório</h3>
+                            <p class="learning-path__step-description">
+                                Toque suas primeiras músicas completas com confiança.
+                            </p>
+                            <span class="learning-path__step-duration">
+                                <i class="fas fa-clock" aria-hidden="true"></i> Contínuo
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="index.html" class="footer__logo">
+                        <span class="footer__logo-icon">🎵</span>
+                        <span class="footer__logo-text">Musica<span class="footer__logo-accent">Viva</span></span>
+                    </a>
+                    <p class="footer__description">
+                        Seu portal completo para aprender música. Cifras, videoaulas, teoria musical e muito mais.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <nav class="footer__nav" aria-label="Links do rodapé">
+                    <h3 class="footer__nav-title">Navegação</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="cifras.html">Cifras</a></li>
+                        <li><a href="videoaulas.html">Videoaulas</a></li>
+                        <li><a href="artigos.html">Artigos</a></li>
+                        <li><a href="dicionario.html">Dicionário</a></li>
+                        <li><a href="curiosidades.html">Curiosidades</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Categorias">
+                    <h3 class="footer__nav-title">Categorias</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#violao">Violão</a></li>
+                        <li><a href="#teclado">Teclado</a></li>
+                        <li><a href="#teoria">Teoria Musical</a></li>
+                        <li><a href="#canto">Canto</a></li>
+                        <li><a href="#bateria">Bateria</a></li>
+                    </ul>
+                </nav>
+                
+                <nav class="footer__nav" aria-label="Suporte">
+                    <h3 class="footer__nav-title">Suporte</h3>
+                    <ul class="footer__nav-list">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 MusicaViva. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <button class="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    
+    <script src="js/main.js" defer></script>
+</body>
+</html>
